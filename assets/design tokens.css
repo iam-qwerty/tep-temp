@@ -1,0 +1,27 @@
+
+  --radius: 0.75rem;
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --font-mono: var(--font-mono);
+
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(180 17.0732% 8.0392%);
+  --card: hsl(180 45.4545% 97.8431%);
+  --card-foreground: hsl(180 17.0732% 8.0392%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(180 17.0732% 8.0392%);
+  --primary: hsl(179.0909 26.8293% 48.2353%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(27.2449 80.9917% 52.549%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(180 30.4348% 95.4902%);
+  --muted-foreground: hsl(177.6 14.4509% 33.9216%);
+  --accent: hsl(27.2449 80.9917% 52.549%);
+  --accent-foreground: hsl(0 0% 100%);
+  --destructive: hsl(0 84.2365% 60.1961%);
+  --destructive-foreground: hsl(210 40% 98.0392%);
+  --border: hsl(180 21.4286% 89.0196%);
+  --input: hsl(180 21.4286% 89.0196%);
+  --ring: hsl(179.0909 26.8293% 48.2353%);
+  --shadow-color: hsl(0 0% 0%);
+  --shadow: 0px 2px 4px hsl(0 0% 0% / 0.10);
