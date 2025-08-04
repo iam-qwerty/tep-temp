@@ -219,8 +219,8 @@ export default function TEPYCCPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground text-sm">
-                  "TEPYCC helped me transition from confusion to clarity. The mentorship and practical skills training
-                  gave me the confidence to pursue tech and land my dream job."
+                  &quot;TEPYCC helped me transition from confusion to clarity. The mentorship and practical skills training
+                  gave me the confidence to pursue tech and land my dream job.&quot;
                 </p>
               </CardContent>
             </Card>
@@ -263,8 +263,8 @@ export default function TEPYCCPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground text-sm">
-                  "TEPYCC gave me the entrepreneurial mindset and network I needed to start my own company. The
-                  mentorship continues even after graduation."
+                  &quot;TEPYCC gave me the entrepreneurial mindset and network I needed to start my own company. The
+                  mentorship continues even after graduation.&quot;
                 </p>
               </CardContent>
             </Card>

@@ -145,7 +145,7 @@ export default function TestimonialsPage() {
                   <div className="lg:col-span-2 space-y-4">
                     <Quote className="h-8 w-8 text-primary/20" />
                     <blockquote className="text-lg lg:text-xl text-foreground leading-relaxed italic">
-                      "{currentTestimonialData.quote}"
+                      &quot;{currentTestimonialData.quote}&quot;
                     </blockquote>
                     <div className="flex items-center space-x-1">
                       {[...Array(currentTestimonialData.rating)].map((_, i) => (
@@ -218,9 +218,9 @@ export default function TestimonialsPage() {
                   <CardContent className="space-y-4">
                     <Quote className="h-6 w-6 text-primary/20" />
                     <blockquote className="text-sm text-muted-foreground leading-relaxed italic">
-                      "
+                      &quot;
                       {testimonial.quote.length > 150 ? testimonial.quote.substring(0, 150) + "..." : testimonial.quote}
-                      "
+                      &quot;
                     </blockquote>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-1">
