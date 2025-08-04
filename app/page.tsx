@@ -1,16 +1,14 @@
-import { Header } from "@/components/header"
-import { Hero } from "@/components/hero"
-import { About } from "@/components/about"
-import { Programs } from "@/components/programs"
-import { Impact } from "@/components/impact"
-import { Team } from "@/components/team"
-import { GetInvolved } from "@/components/get-involved"
-import { Footer } from "@/components/footer"
+
+import { Hero } from "@/components/homepage/hero"
+import { About } from "@/components/homepage/about"
+import { Programs } from "@/components/homepage/programs"
+import { Impact } from "@/components/homepage/impact"
+import { Team } from "@/components/homepage/team"
+import { GetInvolved } from "@/components/homepage/get-involved"
 
 export default function HomePage() {
   return (
     <div className="min-h-screen">
-      <Header />
       <main>
         <Hero />
         <About />
@@ -19,7 +17,6 @@ export default function HomePage() {
         <Team />
         <GetInvolved />
       </main>
-      <Footer />
     </div>
   )
 }

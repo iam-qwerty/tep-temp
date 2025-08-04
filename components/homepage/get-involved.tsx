@@ -52,7 +52,7 @@ const ways = [
 
 export function GetInvolved() {
   return (
-    <section id="get-involved" className="py-20 md:py-32">
+    <section id="get-involved" className="py-20 md:py-32 px-4 md:px-6">
       <div className="container px-4 md:px-6">
         {/* Header */}
         <div className="text-center mb-16">
@@ -87,7 +87,7 @@ export function GetInvolved() {
           <div className="space-y-6">
             <h3 className="text-3xl font-bold tracking-tight sm:text-4xl">Stay Connected</h3>
             <p className="text-muted-foreground">
-              Follow us to stay connected, hear real stories, and get updates on how we're creating purpose-driven
+              Follow us to stay connected, hear real stories, and get updates on how we&apos;re creating purpose-driven
               change - one young life at a time.
             </p>
 
@@ -156,7 +156,7 @@ export function GetInvolved() {
         <div className="text-center mt-16 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-12">
           <h3 className="text-2xl font-bold mb-4">Ready to Make a Difference?</h3>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            If our mission speaks to you, we'd love to hear from you! Drop us a message and let's explore how we can
+            If our mission speaks to you, we&apos;d love to hear from you! Drop us a message and let&apos;s explore how we can
             work together to empower young Nigerians.
           </p>
           <Button size="lg" asChild>

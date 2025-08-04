@@ -92,8 +92,8 @@ export function Team() {
         <div className="text-center bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-12">
           <h3 className="text-2xl font-bold mb-4">Join Our Mission</h3>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            We're always looking for passionate individuals who share our vision of empowering young Nigerians. Whether
-            you're interested in volunteering, mentoring, or joining our team, there's a place for you at The Emergence
+            We&apos;re always looking for passionate individuals who share our vision of empowering young Nigerians. Whether
+            you&apos;re interested in volunteering, mentoring, or joining our team, there&apos;s a place for you at The Emergence
             Porch.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

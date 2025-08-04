@@ -55,7 +55,7 @@ const workModel = [
 
 export function About() {
   return (
-    <section id="about" className="py-20 md:py-32">
+    <section id="about" className="py-20 md:py-32 px-4 md:px-6">
       <div className="container px-4 md:px-6">
         {/* About Introduction */}
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center mb-20">
@@ -72,7 +72,7 @@ export function About() {
                 navigating a maze without a map.
               </p>
               <p>
-                The Emergence Porch was born out of a deep need to change this reality. With over 65% of Nigeria's
+                The Emergence Porch was born out of a deep need to change this reality. With over 65% of Nigeria&apos;s
                 unemployed population aged 15–34, and disadvantaged youth nearly twice as likely to face prolonged
                 joblessness, the system is failing our greatest asset.
               </p>
@@ -84,7 +84,7 @@ export function About() {
           </div>
           <div className="relative">
             <Image
-              src="/nigerian-learning-environment.png"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/nigerian-learning-environment-c7v7A0Xpl7LcgGYn8yzcrFMBIwg09s.png"
               alt="Young Nigerians in supportive community"
               width={600}
               height={500}
@@ -116,7 +116,7 @@ export function About() {
                 <h3 className="text-2xl font-bold">Our Vision</h3>
               </div>
               <p className="text-muted-foreground">
-                To become Nigeria's foremost go-to community for raising purpose-driven young leaders equipped to lead
+                To become Nigeria&apos;s foremost go-to community for raising purpose-driven young leaders equipped to lead
                 meaningful lives, transform their communities, and shape an equitable and thriving future for all.
               </p>
             </CardContent>

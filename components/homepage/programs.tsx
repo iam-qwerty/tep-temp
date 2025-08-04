@@ -40,7 +40,7 @@ const initiatives = [
     description:
       "Self-discovery meets purpose. A comprehensive program designed to help young people unlock their potential and find their calling.",
     icon: GraduationCap,
-    image: "/classroom-personal-development.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/classroom-personal-development-nWZyrjPCGpGmTtPANNlDpMTT7XIQyF.png",
   },
   {
     title: "TEPYCC",
@@ -56,7 +56,7 @@ const initiatives = [
     description:
       "Youth-led research and advocacy in action. Empowering young leaders to influence policy and drive systemic change.",
     icon: FileText,
-    image: "/community-development-team.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/classroom-personal-development-nWZyrjPCGpGmTtPANNlDpMTT7XIQyF.png",
   },
   {
     title: "TEPNH",
@@ -64,7 +64,7 @@ const initiatives = [
     description:
       "A safe, vibrant community for connection, rest, and inspiration. Building lasting relationships and support networks.",
     icon: Network,
-    image: "/diverse-youth-networking.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/diverse-youth-networking-Y5Z6hRtK1J0Rz5Laws4GWtlgtlPX1l.png",
   },
 ]
 

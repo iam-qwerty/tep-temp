@@ -1,15 +1,17 @@
 import type { Config } from "tailwindcss"
 
+// all in fixtures is set to tailwind v3 as interims solutions
+
 const config: Config = {
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{ts,tsx}", // Updated content path
     "*.{js,ts,jsx,tsx,mdx}",
   ],
-  prefix: "",
+  prefix: "", // Added prefix
   theme: {
     container: {
       center: true,
@@ -20,44 +22,47 @@ const config: Config = {
     },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        border: "hsl(180 21.4286% 89.0196%)", // Updated color values
+        input: "hsl(180 21.4286% 89.0196%)", // Updated color values
+        ring: "hsl(179.0909 26.8293% 48.2353%)", // Updated color values
+        background: "hsl(0 0% 100%)", // Updated color values
+        foreground: "hsl(180 17.0732% 8.0392%)", // Updated color values
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "hsl(179.0909 26.8293% 48.2353%)", // Updated color values
+          foreground: "hsl(0 0% 100%)", // Updated color values
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "hsl(27.2449 80.9917% 52.549%)", // Updated color values
+          foreground: "hsl(0 0% 100%)", // Updated color values
         },
         destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
+          DEFAULT: "hsl(0 84.2365% 60.1961%)", // Updated color values
+          foreground: "hsl(210 40% 98.0392%)", // Updated color values
         },
         muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+          DEFAULT: "hsl(180 30.4348% 95.4902%)", // Updated color values
+          foreground: "hsl(177.6 14.4509% 33.9216%)", // Updated color values
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          DEFAULT: "hsl(27.2449 80.9917% 52.549%)", // Updated color values
+          foreground: "hsl(0 0% 100%)", // Updated color values
         },
         popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
+          DEFAULT: "hsl(0 0% 100%)", // Updated color values
+          foreground: "hsl(180 17.0732% 8.0392%)", // Updated color values
         },
         card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+          DEFAULT: "hsl(180 45.4545% 97.8431%)", // Updated color values
+          foreground: "hsl(180 17.0732% 8.0392%)", // Updated color values
         },
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        lg: "0.75rem", // Updated border radius values
+        md: "calc(0.75rem - 2px)", // Updated border radius values
+        sm: "calc(0.75rem - 4px)", // Updated border radius values
+      },
+      boxShadow: {
+        DEFAULT: "0px 2px 4px hsl(0 0% 0% / 0.1)", // Added boxShadow
       },
       keyframes: {
         "accordion-down": {
@@ -72,9 +77,6 @@ const config: Config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-      },
-      boxShadow: {
-        custom: "var(--shadow)",
       },
     },
   },

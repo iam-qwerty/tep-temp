@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-20 md:py-32">
+    <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-20 md:py-32 px-2 md:px-6">
       <div className="container px-4 md:px-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           <div className="space-y-8">
@@ -13,7 +13,7 @@ export function Hero() {
                 Empowering <span className="text-primary">Purpose-Driven</span> Young Leaders
               </h1>
               <p className="text-xl text-muted-foreground md:text-2xl max-w-2xl">
-                Nigeria's go-to community for raising young leaders equipped to lead meaningful lives, transform their
+                Nigeria&apos;s go-to community for raising young leaders equipped to lead meaningful lives, transform their
                 communities, and shape an equitable future for all.
               </p>
             </div>
@@ -46,7 +46,7 @@ export function Hero() {
           <div className="relative">
             <div className="relative aspect-square max-w-lg mx-auto">
               <Image
-                src="/nigerian-professionals-collaboration.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/nigerian-professionals-collaboration-iQl6v3XE7WhGXI5wa31Zbve4Oubt5O.png"
                 alt="Young Nigerian leaders collaborating"
                 width={600}
                 height={600}

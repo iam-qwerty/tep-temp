@@ -33,7 +33,7 @@ const stats = [
 const testimonials = [
   {
     quote:
-      "The Emergence Porch helped me discover my true calling. I went from feeling lost after graduation to launching my own social enterprise that's now impacting hundreds of lives in my community.",
+      "The Emergence Porch helped me discover my true calling. I went from feeling lost after graduation to launching my own social enterprise that&apos;s now impacting hundreds of lives in my community.",
     author: "Adaora Okafor",
     role: "TEPA Graduate & Social Entrepreneur",
     image: "/confident-nigerian-entrepreneur.png",
@@ -56,7 +56,7 @@ const testimonials = [
 
 export function Impact() {
   return (
-    <section id="impact" className="py-20 md:py-32">
+    <section id="impact" className="py-20 md:py-32 px-4 md:px-6">
       <div className="container px-4 md:px-6">
         {/* Header */}
         <div className="text-center mb-16">
@@ -68,7 +68,7 @@ export function Impact() {
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             We believe no one should have to navigate purpose alone. Our work creates space for young people to pause,
-            reflect, and reconnect with who they are and what they're capable of becoming.
+            reflect, and reconnect with who they are and what they&apos;re capable of becoming.
           </p>
         </div>
 
@@ -97,7 +97,7 @@ export function Impact() {
               </p>
               <p>
                 Because when one young person rises whole, the ripple reaches families, communities, and systems. That
-                is the quiet power of what we do. And that's why it matters.
+                is the quiet power of what we do. And that&apos;s why it matters.
               </p>
             </div>
           </div>
@@ -126,7 +126,7 @@ export function Impact() {
               <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
                 <CardContent className="p-0 space-y-4">
                   <Quote className="h-8 w-8 text-primary" />
-                  <p className="text-muted-foreground italic">"{testimonial.quote}"</p>
+                  <p className="text-muted-foreground italic">&quot;{testimonial.quote}&quot;</p>
                   <div className="flex items-center space-x-3">
                     <Image
                       src={testimonial.image || "/placeholder.svg"}
