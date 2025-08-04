@@ -4,41 +4,55 @@ import { Facebook, Instagram, Linkedin, Twitter, Mail, Phone } from "lucide-reac
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
+const quickLinks = [
+  { href: "/about", label: "About Us" },
+  { href: "/initiatives", label: "Our Initiatives" },
+  { href: "/team", label: "Our Team" },
+  { href: "/news", label: "News & Blog" },
+  { href: "/opportunities", label: "Opportunities" },
+]
+const programs = [
+  { href: "/initiatives/tepa", label: "TEPA - Academy" },
+  { href: "/initiatives/tepycc", label: "TEPYCC - Career Compass" },
+  { href: "/initiatives/teppf", label: "TEPPF - Policy Fellowship" },
+  { href: "/initiatives/tepnh", label: "TEPNH - Networking Hub" },
+]
+
 export default function Footer() {
   return (
-    <footer className="bg-muted border-t px-4 md:px-6">
+    <footer className="bg-primary border-t px-4 md:px-6 text-primary-foreground">
       <div className="container px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
               <Image src="/logo.png" alt="The Emergence Porch" width={32} height={32} className="h-8 w-8" />
-              <span className="font-bold text-lg text-primary">The Emergence Porch</span>
+              <span className="font-bold text-lg">The Emergence Porch</span>
             </Link>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-primary-foreground">
               Empowering young Nigerians with leadership skills, career clarity, and social responsibility through
               mentorship and community.
             </p>
             <div className="flex space-x-4">
               <Link
                 href="https://www.linkedin.com/company/the-emergence-porch/"
-                className="text-muted-foreground hover:text-primary"
+                className="text-primary-foreground hover:text-muted"
               >
                 <Linkedin className="h-5 w-5" />
               </Link>
               <Link
                 href="https://www.facebook.com/share/1YnzmqeRhq/"
-                className="text-muted-foreground hover:text-primary"
+                className="text-primary-foreground hover:text-muted"
               >
                 <Facebook className="h-5 w-5" />
               </Link>
               <Link
                 href="https://www.instagram.com/theemergenceporch"
-                className="text-muted-foreground hover:text-primary"
+                className="text-primary-foreground hover:text-muted"
               >
                 <Instagram className="h-5 w-5" />
               </Link>
-              <Link href="https://x.com/emergenceporch" className="text-muted-foreground hover:text-primary">
+              <Link href="https://x.com/emergenceporch" className="text-primary-foreground hover:text-muted">
                 <Twitter className="h-5 w-5" />
               </Link>
             </div>
@@ -46,76 +60,45 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Quick Links</h3>
+            <h3 className="font-semibold text-background">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/about" className="text-muted-foreground hover:text-primary">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/initiatives" className="text-muted-foreground hover:text-primary">
-                  Our Initiatives
-                </Link>
-              </li>
-              <li>
-                <Link href="/team" className="text-muted-foreground hover:text-primary">
-                  Our Team
-                </Link>
-              </li>
-              <li>
-                <Link href="/news" className="text-muted-foreground hover:text-primary">
-                  News & Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="/opportunities" className="text-muted-foreground hover:text-primary">
-                  Opportunities
-                </Link>
-              </li>
+              {quickLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Programs */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Our Programs</h3>
+            <h3 className="font-semibold text-background">Our Programs</h3>
             <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/initiatives/tepa" className="text-muted-foreground hover:text-primary">
-                  TEPA - Academy
-                </Link>
-              </li>
-              <li>
-                <Link href="/initiatives/tepycc" className="text-muted-foreground hover:text-primary">
-                  TEPYCC - Career Compass
-                </Link>
-              </li>
-              <li>
-                <Link href="/initiatives/teppf" className="text-muted-foreground hover:text-primary">
-                  TEPPF - Policy Fellowship
-                </Link>
-              </li>
-              <li>
-                <Link href="/initiatives/tepnh" className="text-muted-foreground hover:text-primary">
-                  TEPNH - Networking Hub
-                </Link>
-              </li>
+              {programs.map((program) => (
+                <li key={program.href}>
+                  <Link href={program.href} className="text-primary-foreground hover:text-primary">
+                    {program.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Contact & Newsletter */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Stay Connected</h3>
+            <h3 className="font-semibold text-background">Stay Connected</h3>
             <div className="space-y-2 text-sm">
               <div className="flex items-center space-x-2">
-                <Mail className="h-4 w-4 text-muted-foreground" />
-                <Link href="mailto:theemergenceporch@gmail.com" className="text-muted-foreground hover:text-primary">
+                <Mail className="h-4 w-4 text-primary-foreground" />
+                <Link href="mailto:theemergenceporch@gmail.com" className="text-primary-foreground hover:text-primary">
                   theemergenceporch@gmail.com
                 </Link>
               </div>
               <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-muted-foreground" />
-                <Link href="tel:+2349125314634" className="text-muted-foreground hover:text-primary">
+                <Phone className="h-4 w-4 text-primary-foreground" />
+                <Link href="tel:+2349125314634" className="text-primary-foreground hover:text-primary">
                   +234 912 531 4634
                 </Link>
               </div>
@@ -124,13 +107,13 @@ export default function Footer() {
               <p className="text-sm font-medium">Newsletter</p>
               <div className="flex space-x-2">
                 <Input placeholder="Your email" className="flex-1" />
-                <Button size="sm">Subscribe</Button>
+                <Button size="sm" variant="secondary">Subscribe</Button>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
+        <div className="border-t mt-8 pt-8 text-center text-sm text-primary-foreground">
           <p>&copy; {new Date().getFullYear()} The Emergence Porch. All rights reserved.</p>
         </div>
       </div>
