@@ -101,7 +101,7 @@ export function Impact() {
               </p>
             </div>
           </div>
-          <div className="relative">
+          {/* <div className="relative">
             <Image
               src="/placeholder.svg?height=500&width=600"
               alt="Impact ripple effect"
@@ -109,7 +109,7 @@ export function Impact() {
               height={500}
               className="rounded-2xl object-cover shadow-lg"
             />
-          </div>
+          </div> */}
         </div>
 
         {/* Testimonials */}

@@ -40,7 +40,7 @@ const initiatives = [
     description:
       "Self-discovery meets purpose. A comprehensive program designed to help young people unlock their potential and find their calling.",
     icon: GraduationCap,
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/classroom-personal-development-nWZyrjPCGpGmTtPANNlDpMTT7XIQyF.png",
+    image: "/tepa.png",
   },
   {
     title: "TEPYCC",
@@ -179,7 +179,7 @@ export function Programs() {
           </div>
           <div className="relative">
             <Image
-              src="/nigerian-collaboration.png"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/nigerian-collaboration-xTwKRmYMHbrAlPsbkpfzb03rA3mtYO.png"
               alt="Diverse youth community"
               width={600}
               height={500}
