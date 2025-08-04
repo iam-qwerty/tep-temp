@@ -5,6 +5,7 @@ import { Programs } from "@/components/homepage/programs"
 import { Impact } from "@/components/homepage/impact"
 import { Team } from "@/components/homepage/team"
 import { GetInvolved } from "@/components/homepage/get-involved"
+import { DonationPreview } from "@/components/homepage/donation-preview"
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
         <Impact />
         <Team />
         <GetInvolved />
+        <DonationPreview />
       </main>
     </div>
   )
