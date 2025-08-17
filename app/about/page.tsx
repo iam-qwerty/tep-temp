@@ -39,7 +39,7 @@ export default function AboutPage() {
                   Foundation of Nigeria, 2024), and the need for safe, nurturing spaces becomes urgent.
                 </p>
                 <p className="font-semibold text-foreground">
-                  Founded on June 1, 2025, The Emergence Porch is a transformative community where young people gain
+                  Founded in July 2025, The Emergence Porch is a transformative community where young people gain
                   clarity, support, and the resilience to thrive.
                 </p>
               </div>

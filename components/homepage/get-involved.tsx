@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { DollarSign, Gift, Users, Megaphone, Clock, Share2 } from "lucide-react"
-// import Image from "next/image"
+import Link from "next/link"
 
 const ways = [
   {
@@ -10,6 +10,7 @@ const ways = [
     title: "Give Financially",
     description: "Sponsor programs that equip youth with the skills, clarity, and confidence to thrive.",
     action: "Donate Now",
+    href: "/donate",
     color: "text-primary",
   },
   {
@@ -17,6 +18,7 @@ const ways = [
     title: "Donate In-Kind",
     description: "Contribute tools, tech, or materials that power our work and expand access.",
     action: "Learn More",
+    href: "/donate",
     color: "text-secondary",
   },
   {
@@ -24,6 +26,7 @@ const ways = [
     title: "Be a Mentor",
     description: "Share your knowledge, experiences, and guidance with young changemakers.",
     action: "Become a Mentor",
+    href: "/contact",
     color: "text-primary",
   },
   {
@@ -31,6 +34,7 @@ const ways = [
     title: "Raise Your Voice",
     description: "Advocate for our mission and help us reach the young people who need us most.",
     action: "Advocate",
+    href: "/contact",
     color: "text-secondary",
   },
   {
@@ -38,6 +42,7 @@ const ways = [
     title: "Volunteer Your Time",
     description: "Lend your passion and skills to support our activities, trainings, or community projects.",
     action: "Volunteer",
+    href: "/contact",
     color: "text-primary",
   },
   {
@@ -46,6 +51,7 @@ const ways = [
     description:
       "Connect us to funding, partnerships, or platforms that can elevate our impact and sustain our growth.",
     action: "Connect Us",
+    href: "/contact",
     color: "text-secondary",
   },
 ]
@@ -74,74 +80,74 @@ export function GetInvolved() {
                 <way.icon className={`h-12 w-12 ${way.color}`} />
                 <h3 className="text-xl font-semibold">{way.title}</h3>
                 <p className="text-muted-foreground">{way.description}</p>
-                <Button variant="outline" className="w-full bg-transparent">
-                  {way.action}
-                </Button>
-              </CardContent>
+                <Link href={way.href}>
+                  <Button variant="outline" className="w-full bg-transparent">{way.action}</Button>
+                </Link>
+            </CardContent>
             </Card>
           ))}
-        </div>
+      </div>
 
-        {/* Contact Information */}
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
-          <div className="space-y-6">
-            <h3 className="text-3xl font-bold tracking-tight sm:text-4xl">Stay Connected</h3>
-            <p className="text-muted-foreground">
-              Follow us to stay connected, hear real stories, and get updates on how we&apos;re creating purpose-driven
-              change - one young life at a time.
-            </p>
+      {/* Contact Information */}
+      <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+        <div className="space-y-6">
+          <h3 className="text-3xl font-bold tracking-tight sm:text-4xl">Stay Connected</h3>
+          <p className="text-muted-foreground">
+            Follow us to stay connected, hear real stories, and get updates on how we&apos;re creating purpose-driven
+            change - one young life at a time.
+          </p>
 
-            <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <span className="font-medium">Email:</span>
-                <a href="mailto:theemergenceporch@gmail.com" className="text-primary hover:underline">
-                  theemergenceporch@gmail.com
-                </a>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="font-medium">Phone/WhatsApp:</span>
-                <a href="tel:+2349125314634" className="text-primary hover:underline">
-                  +234 912 531 4634
-                </a>
-              </div>
+          <div className="space-y-4">
+            <div className="flex items-center space-x-3">
+              <span className="font-medium">Email:</span>
+              <a href="mailto:theemergenceporch@gmail.com" className="text-primary hover:underline">
+                theemergenceporch@gmail.com
+              </a>
             </div>
-
-            <div className="space-y-3">
-              <h4 className="font-semibold">Follow Us:</h4>
-              <div className="flex flex-wrap gap-3">
-                <Button variant="outline" size="sm" asChild>
-                  <a
-                    href="https://www.linkedin.com/company/the-emergence-porch/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    LinkedIn
-                  </a>
-                </Button>
-                <Button variant="outline" size="sm" asChild>
-                  <a href="https://www.facebook.com/share/1YnzmqeRhq/" target="_blank" rel="noopener noreferrer">
-                    Facebook
-                  </a>
-                </Button>
-                <Button variant="outline" size="sm" asChild>
-                  <a
-                    href="https://www.instagram.com/theemergenceporch?igsh=MWs5djhpYXMwdHdhdg=="
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Instagram
-                  </a>
-                </Button>
-                <Button variant="outline" size="sm" asChild>
-                  <a href="https://x.com/emergenceporch?s=08" target="_blank" rel="noopener noreferrer">
-                    X (Twitter)
-                  </a>
-                </Button>
-              </div>
+            <div className="flex items-center space-x-3">
+              <span className="font-medium">Phone/WhatsApp:</span>
+              <a href="tel:+2349125314634" className="text-primary hover:underline">
+                +234 912 531 4634
+              </a>
             </div>
           </div>
 
-          {/* <div className="relative">
+          <div className="space-y-3">
+            <h4 className="font-semibold">Follow Us:</h4>
+            <div className="flex flex-wrap gap-3">
+              <Button variant="outline" size="sm" asChild>
+                <a
+                  href="https://www.linkedin.com/company/the-emergence-porch/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
+              </Button>
+              <Button variant="outline" size="sm" asChild>
+                <a href="https://www.facebook.com/share/1YnzmqeRhq/" target="_blank" rel="noopener noreferrer">
+                  Facebook
+                </a>
+              </Button>
+              <Button variant="outline" size="sm" asChild>
+                <a
+                  href="https://www.instagram.com/theemergenceporch?igsh=MWs5djhpYXMwdHdhdg=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram
+                </a>
+              </Button>
+              <Button variant="outline" size="sm" asChild>
+                <a href="https://x.com/emergenceporch?s=08" target="_blank" rel="noopener noreferrer">
+                  X (Twitter)
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* <div className="relative">
             <Image
               src="/placeholder.svg?height=500&width=600"
               alt="Community involvement"
@@ -150,20 +156,20 @@ export function GetInvolved() {
               className="rounded-2xl object-cover shadow-lg"
             />
           </div> */}
-        </div>
-
-        {/* Final CTA */}
-        <div className="text-center mt-16 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-12">
-          <h3 className="text-2xl font-bold mb-4">Ready to Make a Difference?</h3>
-          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            If our mission speaks to you, we&apos;d love to hear from you! Drop us a message and let&apos;s explore how we can
-            work together to empower young Nigerians.
-          </p>
-          <Button size="lg" asChild>
-            <a href="mailto:theemergenceporch@gmail.com">Get in Touch</a>
-          </Button>
-        </div>
       </div>
-    </section>
+
+      {/* Final CTA */}
+      <div className="text-center mt-16 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-12">
+        <h3 className="text-2xl font-bold mb-4">Ready to Make a Difference?</h3>
+        <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+          If our mission speaks to you, we&apos;d love to hear from you! Drop us a message and let&apos;s explore how we can
+          work together to empower young Nigerians.
+        </p>
+        <Button size="lg" asChild>
+          <a href="mailto:theemergenceporch@gmail.com">Get in Touch</a>
+        </Button>
+      </div>
+    </div>
+    </section >
   )
 }

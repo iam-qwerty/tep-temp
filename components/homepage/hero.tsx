@@ -10,10 +10,10 @@ export function Hero() {
           {/* Left Content */}
           <div className="space-y-6 max-w-2xl">
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-6xl font-bold leading-none tracking-tight">
                 Empowering <span className="text-primary">Purpose-Driven</span> Young Leaders
               </h1>
-              <p className="text-muted-foreground text-lg md:text-lg">
+              <p className="text-muted-foreground text-lg md:text-lg leading-normal">
                 Nigeria&apos;s go-to community for raising young leaders equipped to lead meaningful lives, transform their
                 communities, and shape an equitable future for all.
               </p>
@@ -55,7 +55,7 @@ export function Hero() {
               />
               <div className="absolute -bottom-4 -right-4 bg-secondary text-secondary-foreground p-4 rounded-xl shadow-lg">
                 <div className="text-lg font-bold">Founded</div>
-                <div className="text-sm">June 1, 2025</div>
+                <div className="text-sm">July 2025</div>
               </div>
             </div>
           </div>

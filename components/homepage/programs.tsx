@@ -41,6 +41,7 @@ const initiatives = [
       "Self-discovery meets purpose. A comprehensive program designed to help young people unlock their potential and find their calling.",
     icon: GraduationCap,
     image: "/tepa.png",
+    href: "/initiatives/tepa",
   },
   {
     title: "TEPYCC",
@@ -49,6 +50,7 @@ const initiatives = [
       "Mentorship and training for meaningful work. Connecting young professionals with career guidance and opportunities.",
     icon: Target,
     image: "/placeholder-w3mk6.png",
+    href: "/initiatives/tepycc",
   },
   {
     title: "TEPPF",
@@ -57,6 +59,7 @@ const initiatives = [
       "Youth-led research and advocacy in action. Empowering young leaders to influence policy and drive systemic change.",
     icon: FileText,
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/classroom-personal-development-nWZyrjPCGpGmTtPANNlDpMTT7XIQyF.png",
+    href: "teppfinitiatives/"
   },
   {
     title: "TEPNH",
@@ -65,6 +68,7 @@ const initiatives = [
       "A safe, vibrant community for connection, rest, and inspiration. Building lasting relationships and support networks.",
     icon: Network,
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/diverse-youth-networking-Y5Z6hRtK1J0Rz5Laws4GWtlgtlPX1l.png",
+    href: "/initiatives/tepnh"
   },
 ]
 
@@ -124,26 +128,28 @@ export function Programs() {
 
           <div className="grid gap-8 lg:grid-cols-2">
             {initiatives.map((initiative, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="aspect-video relative">
-                  <Image
-                    src={initiative.image || "/placeholder.svg"}
-                    alt={initiative.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <CardHeader>
-                  <div className="flex items-center space-x-3 mb-2">
-                    <initiative.icon className="h-6 w-6 text-primary" />
-                    <Badge variant="outline">{initiative.title}</Badge>
+              <Link href={initiative.href} key={index}>
+                <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+                  <div className="aspect-video relative">
+                    <Image
+                      src={initiative.image || "/placeholder.svg"}
+                      alt={initiative.title}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
-                  <CardTitle className="text-lg">{initiative.subtitle}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{initiative.description}</p>
-                </CardContent>
-              </Card>
+                  <CardHeader>
+                    <div className="flex items-center space-x-3 mb-2">
+                      <initiative.icon className="h-6 w-6 text-primary" />
+                      <Badge variant="outline">{initiative.title}</Badge>
+                    </div>
+                    <CardTitle className="text-lg">{initiative.subtitle}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">{initiative.description}</p>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>

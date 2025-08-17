@@ -35,24 +35,24 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <Link
-                href="https://www.linkedin.com/company/the-emergence-porch/"
+                href="https://www.linkedin.com/company/the-emergence-porch/" target="_blank"
                 className="text-primary-foreground hover:text-muted"
               >
                 <Linkedin className="h-5 w-5" />
               </Link>
               <Link
-                href="https://www.facebook.com/share/1YnzmqeRhq/"
+                href="https://www.facebook.com/share/1YnzmqeRhq/" target="_blank"
                 className="text-primary-foreground hover:text-muted"
               >
                 <Facebook className="h-5 w-5" />
               </Link>
               <Link
-                href="https://www.instagram.com/theemergenceporch"
+                href="https://www.instagram.com/theemergenceporch" target="_blank"
                 className="text-primary-foreground hover:text-muted"
               >
                 <Instagram className="h-5 w-5" />
               </Link>
-              <Link href="https://x.com/emergenceporch" className="text-primary-foreground hover:text-muted">
+              <Link href="https://x.com/emergenceporch" target="_blank" className="text-primary-foreground hover:text-muted">
                 <Twitter className="h-5 w-5" />
               </Link>
             </div>

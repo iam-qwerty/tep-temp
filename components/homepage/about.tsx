@@ -28,7 +28,7 @@ export function About() {
                 joblessness, the system is failing our greatest asset.
               </p>
               <p>
-                Founded on June 1, 2025, The Emergence Porch is a transformative community where young people gain
+                Founded in July 2025, The Emergence Porch is a transformative community where young people gain
                 clarity, support, and the resilience to thrive.
               </p>
             </div>
