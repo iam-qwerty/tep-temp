@@ -40,7 +40,7 @@ const initiatives = [
     description:
       "Self-discovery meets purpose. A comprehensive program designed to help young people unlock their potential and find their calling.",
     icon: GraduationCap,
-    image: "/tepa.png",
+    image: "https://plus.unsplash.com/premium_photo-1713890424186-11d3584a22fc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     href: "/initiatives/tepa",
   },
   {
@@ -49,7 +49,7 @@ const initiatives = [
     description:
       "Mentorship and training for meaningful work. Connecting young professionals with career guidance and opportunities.",
     icon: Target,
-    image: "/placeholder-w3mk6.png",
+    image: "https://images.unsplash.com/photo-1660795307991-f9d5254a139c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNhcmVlciUyMHRyYWluaW5nfGVufDB8fDB8fHww",
     href: "/initiatives/tepycc",
   },
   {
@@ -58,7 +58,7 @@ const initiatives = [
     description:
       "Youth-led research and advocacy in action. Empowering young leaders to influence policy and drive systemic change.",
     icon: FileText,
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/classroom-personal-development-nWZyrjPCGpGmTtPANNlDpMTT7XIQyF.png",
+    image: "https://images.unsplash.com/photo-1739300293390-da9b6b474ed9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGJsYWNrJTIwWW91dGglMjBsZWQlMjByZXNlYXJjaCUyMHRlYW18ZW58MHx8MHx8fDA%3D",
     href: "teppfinitiatives/"
   },
   {
@@ -67,7 +67,7 @@ const initiatives = [
     description:
       "A safe, vibrant community for connection, rest, and inspiration. Building lasting relationships and support networks.",
     icon: Network,
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/diverse-youth-networking-Y5Z6hRtK1J0Rz5Laws4GWtlgtlPX1l.png",
+    image: "https://plus.unsplash.com/premium_photo-1704756437701-7a5fb3a24379?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fEJsYWNrJTIweW91dGglMjBzdXBwb3J0JTIwbmV0d29ya3xlbnwwfHwwfHx8MA%3D%3D",
     href: "/initiatives/tepnh"
   },
 ]
@@ -84,7 +84,7 @@ const whoWeServe = [
 
 export function Programs() {
   return (
-    <section id="programs" className="py-20 md:py-32 bg-muted/30">
+    <section id="programs" className="py-20 md:py-32 bg-muted/30 ">
       <div className="container px-4 md:px-6">
         {/* Header */}
         <div className="text-center mb-16">
