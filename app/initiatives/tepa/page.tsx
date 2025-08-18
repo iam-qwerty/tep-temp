@@ -266,7 +266,7 @@ export default function TEPAPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="default" asChild>
-                <Link href="/get-involved">
+                <Link href="/contact">
                   Apply Now <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
