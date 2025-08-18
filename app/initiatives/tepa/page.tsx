@@ -9,7 +9,7 @@ export default function TEPAPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
+      <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5 px-2 md:px-6">
         <div className="container px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -18,24 +18,24 @@ export default function TEPAPage() {
               </Badge>
               <h1 className="text-4xl lg:text-6xl font-bold text-foreground">TEPA</h1>
               <h2 className="text-2xl lg:text-3xl text-primary font-semibold">The Emergence Porch Academy</h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 Self-discovery meets purpose. Our flagship academy program empowers young people with self-awareness,
                 values-based leadership, and critical thinking skills to become intentional changemakers.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" asChild>
-                  <Link href="/get-involved">
+                  <Link href="/contact">
                     Apply Now <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
+                {/* <Button size="lg" variant="outline" asChild>
                   <Link href="/contact">Learn More</Link>
-                </Button>
+                </Button> */}
               </div>
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=500&width=600"
+                src="https://plus.unsplash.com/premium_photo-1713890424186-11d3584a22fc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="TEPA leadership workshop"
                 width={600}
                 height={500}
@@ -107,7 +107,7 @@ export default function TEPAPage() {
       </section>
 
       {/* Curriculum */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-white">
         <div className="container px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center space-y-4 mb-12">
@@ -191,7 +191,7 @@ export default function TEPAPage() {
       </section>
 
       {/* Program Details */}
-      <section className="py-20">
+      <section className="py-20 px-2 md:px-6">
         <div className="container px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-6">
@@ -256,28 +256,28 @@ export default function TEPAPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section className="py-20 bg-gradient-to-r from-primary/10 to-secondary/10">
         <div className="container px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h2 className="text-3xl lg:text-4xl font-bold">Ready to Discover Your Purpose?</h2>
-            <p className="text-xl opacity-90">
+            <p className="text-lg opacity-90 text-muted-foreground">
               Join the next TEPA cohort and embark on a transformative journey of self-discovery and leadership
               development.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" asChild>
+              <Button size="lg" variant="default" asChild>
                 <Link href="/get-involved">
                   Apply Now <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button
+              {/* <Button
                 size="lg"
                 variant="outline"
                 className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent"
                 asChild
               >
                 <Link href="/contact">Contact Us</Link>
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>

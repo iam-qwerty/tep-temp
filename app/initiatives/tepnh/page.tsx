@@ -9,7 +9,7 @@ export default function TEPNHPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-secondary/5 to-primary/5">
+      <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5 px-2 md:px-6">
         <div className="container px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -17,25 +17,25 @@ export default function TEPNHPage() {
                 Community & Networking
               </Badge>
               <h1 className="text-4xl lg:text-6xl font-bold text-foreground">TEPNH</h1>
-              <h2 className="text-2xl lg:text-3xl text-secondary font-semibold">The Emergence Porch Networking Hub</h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
+              <h2 className="text-2xl lg:text-3xl text-primary font-semibold">The Emergence Porch Networking Hub</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 A safe, vibrant community for connection, rest, and inspiration. This hub creates meaningful spaces for
                 young people to connect, collaborate, and find support in their personal and professional journey.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" asChild>
-                  <Link href="/get-involved">
+                  <Link href="/contact">
                     Join Community <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
+                {/* <Button size="lg" variant="outline" asChild>
                   <Link href="/contact">Learn More</Link>
-                </Button>
+                </Button> */}
               </div>
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=500&width=600"
+                src="https://plus.unsplash.com/premium_photo-1704756437701-7a5fb3a24379?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fEJsYWNrJTIweW91dGglMjBzdXBwb3J0JTIwbmV0d29ya3xlbnwwfHwwfHx8MA%3D%3D"
                 alt="TEPNH networking hub"
                 width={600}
                 height={500}
@@ -109,7 +109,7 @@ export default function TEPNHPage() {
       </section>
 
       {/* Hub Activities */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-white">
         <div className="container px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center space-y-4 mb-12">
@@ -193,7 +193,7 @@ export default function TEPNHPage() {
       </section>
 
       {/* Community Benefits */}
-      <section className="py-20">
+      <section className="py-20 px-2 md:px-6">
         <div className="container px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-6">
@@ -259,7 +259,7 @@ export default function TEPNHPage() {
       </section>
 
       {/* Upcoming Events */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-white md:px-6">
         <div className="container px-4">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Upcoming Events</h2>
@@ -332,32 +332,31 @@ export default function TEPNHPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-secondary text-secondary-foreground">
+      <section className="py-20 bg-gradient-to-r from-primary/10 to-secondary/10">
         <div className="container px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h2 className="text-3xl lg:text-4xl font-bold">Ready to Find Your Community?</h2>
-            <p className="text-xl opacity-90">
+            <p className="text-lg opacity-90 text-muted-foreground">
               Join TEPNH and become part of a supportive network of young leaders who care about growth, connection, and
               impact.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                variant="outline"
-                className="bg-transparent border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary"
+                variant="default"
                 asChild
               >
-                <Link href="/get-involved">
+                <Link href="/contact">
                   Join Community <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button
+              {/* <Button
                 size="lg"
                 className="bg-secondary-foreground text-secondary hover:bg-secondary-foreground/90"
                 asChild
               >
                 <Link href="/contact">Contact Us</Link>
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>

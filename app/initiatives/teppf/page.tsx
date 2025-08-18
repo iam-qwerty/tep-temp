@@ -9,7 +9,7 @@ export default function TEPPFPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
+      <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5 md:px-6">
         <div className="container px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -18,24 +18,24 @@ export default function TEPPFPage() {
               </Badge>
               <h1 className="text-4xl lg:text-6xl font-bold text-foreground">TEPPF</h1>
               <h2 className="text-2xl lg:text-3xl text-primary font-semibold">The Emergence Porch Policy Fellowship</h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 Youth-led research and advocacy in action. This fellowship equips young people to drive systemic change
                 through research, community engagement, and evidence-based policy reform.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" asChild>
-                  <Link href="/get-involved">
+                  <Link href="/contact">
                     Apply for Fellowship <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
+                {/* <Button size="lg" variant="outline" asChild>
                   <Link href="/contact">Learn More</Link>
-                </Button>
+                </Button> */}
               </div>
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=500&width=600"
+                src="https://images.unsplash.com/photo-1739300293390-da9b6b474ed9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGJsYWNrJTIwWW91dGglMjBsZWQlMjByZXNlYXJjaCUyMHRlYW18ZW58MHx8MHx8fDA%3D"
                 alt="TEPPF policy fellowship"
                 width={600}
                 height={500}
@@ -106,7 +106,7 @@ export default function TEPPFPage() {
       </section>
 
       {/* Research Focus Areas */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-white">
         <div className="container px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center space-y-4 mb-12">
@@ -245,7 +245,7 @@ export default function TEPPFPage() {
       </section>
 
       {/* Impact & Outcomes */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-white md:px-6">
         <div className="container px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-6">
@@ -300,23 +300,23 @@ export default function TEPPFPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section className="py-20 bg-gradient-to-r from-primary/10 to-secondary/10">
         <div className="container px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h2 className="text-3xl lg:text-4xl font-bold">Ready to Drive Policy Change?</h2>
-            <p className="text-xl opacity-90">
+            <p className="text-lg opacity-90">
               Join TEPPF and become part of a new generation of policy advocates working to transform Nigeria.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" asChild>
-                <Link href="/get-involved">
+              <Button size="lg" variant="default" asChild>
+                <Link href="/contact">
                   Apply for Fellowship <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent"
+                className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground"
                 asChild
               >
                 <Link href="/resources">View Research</Link>
