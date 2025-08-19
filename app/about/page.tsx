@@ -10,7 +10,7 @@ export default function AboutPage() {
         <div className="container px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="text-4xl lg:text-6xl font-bold text-foreground">About The Emergence Porch</h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed">
               Born out of a deep need to change the reality for young Nigerians navigating purpose in an uncertain
               world.
             </p>
@@ -19,7 +19,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story */}
-      <section className="py-20">
+      <section className="py-20 md:px-6">
         <div className="container px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -58,7 +58,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission, Vision, Values */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-white md:px-6">
         <div className="container px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <Card>
@@ -102,11 +102,11 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values */}
-      <section className="py-20">
+      <section className="py-20 md:px-6">
         <div className="container px-4">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Our Core Values</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               The principles that guide everything we do and shape our community.
             </p>
           </div>
@@ -191,19 +191,19 @@ export default function AboutPage() {
       </section>
 
       {/* Who We Serve */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-white">
         <div className="container px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center space-y-4 mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Who We Serve</h2>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-lg text-muted-foreground">
                 We are committed to supporting a diverse spectrum of youth across Nigeria.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-foreground">Our Primary Audience</h3>
+                <h3 className="text-lg font-semibold text-foreground">Our Primary Audience</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>• Young people aged 15–30</li>
                   <li>• Undergraduate students</li>
@@ -215,7 +215,7 @@ export default function AboutPage() {
                 </ul>
               </div>
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-foreground">Extended Services</h3>
+                <h3 className="text-lg font-semibold text-foreground">Extended Services</h3>
                 <p className="text-muted-foreground">
                   We also offer transformative retreats and team-building experiences for organisations looking to
                   nurture the wellbeing and leadership potential of their staff.
@@ -248,7 +248,7 @@ export default function AboutPage() {
                 We do more than build skills—we restore belief. Through community, mentorship, and intentional
                 programmes, we walk with young people as they discover clarity, confidence, and direction.
               </p>
-              <p className="text-xl font-semibold text-foreground">
+              <p className="text-lg font-semibold text-foreground">
                 Because when one young person rises whole, the ripple reaches families, communities, and systems. That
                 is the quiet power of what we do. And that&apos;s why it matters.
               </p>

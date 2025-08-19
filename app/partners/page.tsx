@@ -184,12 +184,12 @@ export default function PartnersPage() {
       </section>
 
       {/* Partners Grid */}
-      <section className="py-20 bg-muted">
+      <section className="py-20">
         <div className="container px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center space-y-4 mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Meet Our Partners</h2>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-lg text-muted-foreground">
                 Organizations that share our vision of empowering young Nigerian leaders.
               </p>
             </div>
@@ -206,7 +206,7 @@ export default function PartnersPage() {
                         className="object-contain"
                       />
                     </div>
-                    <Badge variant="outline" className="w-fit mx-auto mb-2">
+                    <Badge variant="secondary" className="w-fit mx-auto mb-2">
                       {partner.category}
                     </Badge>
                     <CardTitle className="text-lg">{partner.name}</CardTitle>
@@ -217,9 +217,9 @@ export default function PartnersPage() {
                   <CardContent className="space-y-4">
                     <p className="text-sm text-muted-foreground leading-relaxed">{partner.description}</p>
                     <Button
-                      variant="outline"
+                      variant="default"
                       size="sm"
-                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
+                      className="w-full"
                       asChild
                     >
                       <Link href={partner.website} target="_blank">

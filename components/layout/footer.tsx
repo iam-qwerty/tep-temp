@@ -20,7 +20,7 @@ const programs = [
 
 export default function Footer() {
   return (
-    <footer className="bg-primary border-t px-4 md:px-6 text-primary-foreground">
+    <footer className="bg-primary md:px-6 text-primary-foreground">
       <div className="container px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and Description */}
