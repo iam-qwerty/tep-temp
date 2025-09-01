@@ -2,18 +2,18 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Target, Eye } from "lucide-react"
 import Image from "next/image"
-import { values, workModel } from "@/lib/data"
+import { values } from "@/lib/data"
 
 export function About() {
   return (
-    <section id="about" className="py-20 md:py-32 px-4 md:px-6">
+    <section id="about" className="py-20 md:pt-32 pb-0 px-4 md:px-6">
       <div className="container px-4 md:px-6">
         {/* About Introduction */}
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center mb-20">
           <div className="space-y-6">
-            <Badge variant="secondary" className="w-fit">
+            {/* <Badge variant="secondary" className="w-fit">
               About Us
-            </Badge>
+            </Badge> */}
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
               Changing the Reality for Young Nigerians
             </h2>
@@ -24,7 +24,7 @@ export function About() {
               </p>
               <p>
                 The Emergence Porch was born out of a deep need to change this reality. With over 65% of Nigeria&apos;s
-                unemployed population aged 15–34, and disadvantaged youth nearly twice as likely to face prolonged
+                unemployed population aged 15–30, and disadvantaged youth nearly twice as likely to face prolonged
                 joblessness, the system is failing our greatest asset.
               </p>
               <p>
@@ -77,10 +77,10 @@ export function About() {
         {/* Core Values */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <Badge variant="secondary" className="mb-4">
-              Our Values
-            </Badge>
-            <h3 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">What Drives Us Forward</h3>
+            {/* <Badge variant="secondary" className="mb-4">
+              Values
+            </Badge> */}
+            <h3 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Our Core Values</h3>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Our core values guide everything we do and shape how we serve our community.
             </p>
@@ -97,29 +97,6 @@ export function About() {
               </Card>
             ))}
           </div>
-        </div>
-
-        {/* Work Model */}
-        <div className="text-center mb-12">
-          <Badge variant="secondary" className="mb-4">
-            Our Approach
-          </Badge>
-          <h3 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">How We Work</h3>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-12">
-            Our three-step model guides young people through their journey of growth and impact.
-          </p>
-        </div>
-
-        <div className="grid gap-8 md:grid-cols-3">
-          {workModel.map((step, index) => (
-            <div key={index} className="text-center space-y-4">
-              <div className="mx-auto w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-2xl font-bold">
-                {step.step}
-              </div>
-              <h4 className="text-2xl font-bold">{step.title}</h4>
-              <p className="text-muted-foreground">{step.description}</p>
-            </div>
-          ))}
         </div>
       </div>
     </section>
