@@ -45,7 +45,7 @@ export function WhoWeServe() {
                                 the wellbeing and leadership potential of their staff.
                             </p>
                             <Button asChild>
-                                <Link href="#get-involved">Become a member of the community</Link>
+                                <Link target="_blank" href="https://bit.ly/TEPMembershipForm">Become a member of the community</Link>
                             </Button>
                         </div>
                     </div>

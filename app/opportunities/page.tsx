@@ -1,98 +1,447 @@
-import React from 'react'
+"use client"
+
+import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import Link from 'next/link'
+import { 
+  Users, 
+  Calendar, 
+  Briefcase, 
+  MapPin, 
+  Clock, 
+  Star, 
+  Heart,
+  Award,
+  Lightbulb,
+  Target
+} from 'lucide-react'
 
-interface Opportunity {
-    title: string
-    description: string
-    commitment: string
-    type: string
+interface Vacancy {
+  id: string
+  title: string
+  department: string
+  location: string
+  type: 'Full-time' | 'Part-time' | 'Contract'
+  salary: string
+  description: string
+  requirements: string[]
+  deadline: string
+  urgent?: boolean
 }
 
-// const OpportunityCard = ({ opportunity }: { opportunity: Opportunity }) => (
-//     <Card className="p-6 hover:shadow-lg transition-shadow">
-//         <div className="flex justify-between items-start gap-4">
-//             <div className="space-y-1">
-//                 <h3 className="text-xl font-semibold">{opportunity.title}</h3>
-//                 <p className="text-sm text-secondary">{opportunity.type} • {opportunity.commitment}</p>
-//                 <p className="text-muted-foreground text-sm">{opportunity.description}</p>
-//             </div>
-//             <Button variant="default" asChild className="shrink-0">
-//                 <Link href="/contact">Apply Now</Link>
-//             </Button>
-//         </div>
-//     </Card>
-// )
+interface Event {
+  id: string
+  title: string
+  date: string
+  time: string
+  location: string
+  type: 'Workshop' | 'Conference' | 'Networking' | 'Training'
+  description: string
+  capacity: number
+  registered: number
+  featured?: boolean
+}
 
-const opportunities: Opportunity[] = [
-    {
-        title: 'Volunteer Mentor',
-        description: 'Guide and support youth in their personal and professional development journey. Share your experience and expertise to help shape future leaders.',
-        commitment: '4-6 hours/week',
-        type: 'Volunteer'
-    },
-    {
-        title: 'Program Coordinator',
-        description: 'Help organize and coordinate our various initiatives. Work directly with our team to ensure smooth execution of programs and events.',
-        commitment: 'Full-time',
-        type: 'Employment'
-    },
-    {
-        title: 'Community Outreach Ambassador',
-        description: 'Represent TEP in community events and help build strong relationships with local organizations and stakeholders.',
-        commitment: 'Flexible',
-        type: 'Volunteer'
-    },
-    {
-        title: 'Youth Development Specialist',
-        description: 'Work directly with young people to implement transformative programs and provide guidance in their personal growth journey.',
-        commitment: 'Full-time',
-        type: 'Employment'
-    }
+interface VolunteerOpportunity {
+  id: string
+  title: string
+  category: string
+  commitment: string
+  impact: string
+  description: string
+  skills: string[]
+  icon: React.ReactNode
+}
+
+const vacancies: Vacancy[] = [
+  {
+    id: '1',
+    title: 'Youth Development Coordinator',
+    department: 'Programs',
+    location: 'Lagos, Nigeria',
+    type: 'Full-time',
+    salary: '₦150,000 - ₦250,000/month',
+    description: 'Lead youth development programs and coordinate community outreach initiatives across Lagos.',
+    requirements: ['Bachelor\'s degree in Social Sciences', '3+ years experience', 'Leadership skills'],
+    deadline: '2024-02-15',
+    urgent: true
+  },
+  {
+    id: '2',
+    title: 'Community Outreach Specialist',
+    department: 'Community Relations',
+    location: 'Abuja, Nigeria',
+    type: 'Full-time',
+    salary: '₦120,000 - ₦180,000/month',
+    description: 'Build and maintain relationships with community partners and stakeholders.',
+    requirements: ['Communication skills', 'Community engagement experience', 'Local knowledge'],
+    deadline: '2024-02-28'
+  },
+  {
+    id: '3',
+    title: 'Digital Content Creator',
+    department: 'Marketing',
+    location: 'Remote',
+    type: 'Part-time',
+    salary: '₦80,000 - ₦120,000/month',
+    description: 'Create engaging content for social media and digital campaigns.',
+    requirements: ['Content creation experience', 'Social media knowledge', 'Creative skills'],
+    deadline: '2024-03-10'
+  }
 ]
 
-export default function OpportunitiesPage() {
-    return (
-        <div className="container mx-auto py-16 px-4">
-            <div className="max-w-3xl mx-auto">
-                <h1 className="text-4xl font-bold text-center mb-4">Join Our Mission</h1>
-                <p className="text-lg text-muted-foreground text-center mb-12">
-                    Discover meaningful opportunities to make a difference in your community and help transform lives across Nigeria.
-                </p>
+const events: Event[] = [
+  {
+    id: '1',
+    title: 'Youth Leadership Summit 2024',
+    date: '2024-03-15',
+    time: '9:00 AM - 5:00 PM',
+    location: 'Lagos Convention Center',
+    type: 'Conference',
+    description: 'A premier gathering of young leaders, entrepreneurs, and change-makers from across Nigeria.',
+    capacity: 500,
+    registered: 387,
+    featured: true
+  },
+  {
+    id: '2',
+    title: 'Community Building Workshop',
+    date: '2024-02-28',
+    time: '2:00 PM - 6:00 PM',
+    location: 'TEP Community Center, Abuja',
+    type: 'Workshop',
+    description: 'Learn practical skills for community engagement and sustainable development.',
+    capacity: 50,
+    registered: 23
+  },
+  {
+    id: '3',
+    title: 'Mentorship Networking Event',
+    date: '2024-03-08',
+    time: '6:00 PM - 9:00 PM',
+    location: 'Virtual Event',
+    type: 'Networking',
+    description: 'Connect with mentors and mentees in our interactive virtual networking session.',
+    capacity: 200,
+    registered: 145
+  }
+]
 
-                <div className="grid gap-6">
-                    {opportunities.map((opportunity, index) => (
-                        <Card key={index} className="p-6">
-                            <div className="flex flex-col gap-4">
-                                <div className="flex justify-between items-start">
-                                    <div>
-                                        <h3 className="text-xl font-semibold">{opportunity.title}</h3>
-                                        <p className="text-sm text-secondary mt-1">
-                                            {opportunity.type} • {opportunity.commitment}
-                                        </p>
-                                    </div>
-                                    <Button variant="default">
-                                        <Link href="/contact">
-                                            Apply Now
-                                        </Link>
-                                    </Button>
-                                </div>
-                                <p className="text-muted-foreground">{opportunity.description}</p>
-                            </div>
-                        </Card>
-                    ))}
-                </div>
+const volunteerOpportunities: VolunteerOpportunity[] = [
+  {
+    id: '1',
+    title: 'Youth Mentor',
+    category: 'Education',
+    commitment: '4-6 hours/week',
+    impact: 'Guide 2-3 youth through their development journey',
+    description: 'Share your experience and expertise to help shape future leaders.',
+    skills: ['Mentoring', 'Communication', 'Leadership'],
+    icon: <Users className="w-6 h-6" />
+  },
+  {
+    id: '2',
+    title: 'Event Coordinator',
+    category: 'Operations',
+    commitment: 'Flexible',
+    impact: 'Support organization of community events and workshops',
+    description: 'Help organize and coordinate our various initiatives and community events.',
+    skills: ['Organization', 'Event Planning', 'Teamwork'],
+    icon: <Calendar className="w-6 h-6" />
+  },
+  {
+    id: '3',
+    title: 'Content Creator',
+    category: 'Marketing',
+    commitment: '2-4 hours/week',
+    impact: 'Create content that reaches 10,000+ people monthly',
+    description: 'Create engaging content for our social media and digital platforms.',
+    skills: ['Writing', 'Design', 'Social Media'],
+    icon: <Lightbulb className="w-6 h-6" />
+  }
+]
 
-                <div className="mt-12 text-center">
-                    <p className="text-muted-foreground mb-6">
-                        Don&apos;t see a role that fits? We&apos;re always looking for passionate individuals to join our team.
-                    </p>
-                    <Button size="lg">
-                        Contact Us
-                    </Button>
-                </div>
+const VacancyCard = ({ vacancy }: { vacancy: Vacancy }) => (
+  <Card className="p-6 hover:shadow-xl transition-all duration-300 border-l-4 border-l-primary group">
+    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
+      <div className="flex-1">
+        <div className="flex items-start justify-between mb-3">
+          <div className="flex items-center gap-3">
+            <Briefcase className="w-8 h-8 text-primary" />
+            <div>
+              <h3 className="text-xl font-bold group-hover:text-primary transition-colors">
+                {vacancy.title}
+              </h3>
+              <p className="text-sm text-muted-foreground">{vacancy.department}</p>
             </div>
+          </div>
+          {vacancy.urgent && (
+            <Badge variant="destructive" className="animate-pulse">
+              Urgent
+            </Badge>
+          )}
         </div>
-    )
+        
+        <div className="flex flex-wrap gap-2 mb-4">
+          <Badge variant="secondary" className="flex items-center gap-1">
+            <MapPin className="w-3 h-3" />
+            {vacancy.location}
+          </Badge>
+          <Badge variant="outline">{vacancy.type}</Badge>
+          <Badge variant="outline" className="text-green-600">
+            {vacancy.salary}
+          </Badge>
+        </div>
+        
+        <p className="text-muted-foreground mb-4">{vacancy.description}</p>
+        
+        <div className="mb-4">
+          <h4 className="font-semibold mb-2">Requirements:</h4>
+          <ul className="text-sm text-muted-foreground space-y-1">
+            {vacancy.requirements.map((req, index) => (
+              <li key={index} className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                {req}
+              </li>
+            ))}
+          </ul>
+        </div>
+        
+        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+          <Clock className="w-4 h-4" />
+          <span>Deadline: {new Date(vacancy.deadline).toLocaleDateString()}</span>
+        </div>
+      </div>
+      
+      <div className="lg:text-right">
+        <Button asChild className="w-full lg:w-auto">
+          <Link href="/contact">Apply Now</Link>
+        </Button>
+      </div>
+    </div>
+  </Card>
+)
+
+const EventCard = ({ event }: { event: Event }) => (
+  <Card className="p-6 hover:shadow-xl transition-all duration-300 group relative overflow-hidden">
+    {event.featured && (
+      <div className="absolute top-4 right-4">
+        <Badge className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white">
+          <Star className="w-3 h-3 mr-1" />
+          Featured
+        </Badge>
+      </div>
+    )}
+    
+    <div className="flex flex-col lg:flex-row lg:items-start gap-4">
+      <div className="flex-1">
+        <div className="flex items-center gap-3 mb-3">
+          <Calendar className="w-8 h-8 text-primary" />
+          <div>
+            <h3 className="text-xl font-bold group-hover:text-primary transition-colors">
+              {event.title}
+            </h3>
+            <Badge variant="outline" className="mt-1">{event.type}</Badge>
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-2 gap-4 mb-4 text-sm">
+          <div className="flex items-center gap-2">
+            <Calendar className="w-4 h-4 text-muted-foreground" />
+            <span>{new Date(event.date).toLocaleDateString()}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Clock className="w-4 h-4 text-muted-foreground" />
+            <span>{event.time}</span>
+          </div>
+          <div className="flex items-center gap-2 col-span-2">
+            <MapPin className="w-4 h-4 text-muted-foreground" />
+            <span>{event.location}</span>
+          </div>
+        </div>
+        
+        <p className="text-muted-foreground mb-4">{event.description}</p>
+        
+        <div className="flex items-center justify-between">
+          <div className="text-sm">
+            <span className="font-semibold">{event.registered}</span>
+            <span className="text-muted-foreground"> / {event.capacity} registered</span>
+          </div>
+          <div className="w-32 bg-muted rounded-full h-2">
+            <div 
+              className="bg-primary h-2 rounded-full transition-all duration-300"
+              style={{ width: `${(event.registered / event.capacity) * 100}%` }}
+            ></div>
+          </div>
+        </div>
+      </div>
+      
+      <div className="lg:text-right">
+        <Button 
+          asChild 
+          variant={event.registered >= event.capacity ? "secondary" : "default"}
+          disabled={event.registered >= event.capacity}
+          className="w-full lg:w-auto"
+        >
+          <Link href="/contact">
+            {event.registered >= event.capacity ? 'Full' : 'Register'}
+          </Link>
+        </Button>
+      </div>
+    </div>
+  </Card>
+)
+
+const VolunteerCard = ({ opportunity }: { opportunity: VolunteerOpportunity }) => (
+  <Card className="p-6 hover:shadow-xl transition-all duration-300 group hover:border-primary/50">
+    <div className="flex items-start gap-4">
+      <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+        {opportunity.icon}
+      </div>
+      
+      <div className="flex-1">
+        <div className="flex items-start justify-between mb-2">
+          <div>
+            <h3 className="text-xl font-bold group-hover:text-primary transition-colors">
+              {opportunity.title}
+            </h3>
+            <Badge variant="secondary" className="mt-1">{opportunity.category}</Badge>
+          </div>
+          <div className="text-right">
+            <p className="text-sm text-muted-foreground">{opportunity.commitment}</p>
+          </div>
+        </div>
+        
+        <div className="flex items-center gap-2 mb-3">
+          <Target className="w-4 h-4 text-green-600" />
+          <span className="text-sm font-medium text-green-600">{opportunity.impact}</span>
+        </div>
+        
+        <p className="text-muted-foreground mb-4">{opportunity.description}</p>
+        
+        <div className="flex flex-wrap gap-2 mb-4">
+          {opportunity.skills.map((skill, index) => (
+            <Badge key={index} variant="outline" className="text-xs">
+              {skill}
+            </Badge>
+          ))}
+        </div>
+        
+        <Button asChild size="sm">
+          <Link href="/contact">Get Involved</Link>
+        </Button>
+      </div>
+    </div>
+  </Card>
+)
+
+export default function OpportunitiesPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
+      {/* Hero Section */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto text-center mb-12">
+          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
+            <Heart className="w-4 h-4" />
+            <span className="text-sm font-medium">Join Our Mission</span>
+          </div>
+          
+          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+            Shape Tomorrow&apos;s Leaders
+          </h1>
+          
+          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Discover meaningful opportunities to make a difference in your community and help transform lives across Nigeria through vacancies, events, and volunteer roles.
+          </p>
+          
+          <div className="flex flex-wrap justify-center gap-4 text-sm">
+            <div className="flex items-center gap-2">
+              <Award className="w-4 h-4 text-primary" />
+              <span>Impact-driven opportunities</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Users className="w-4 h-4 text-primary" />
+              <span>Supportive community</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Lightbulb className="w-4 h-4 text-primary" />
+              <span>Continuous learning</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Main Content */}
+        <div className="max-w-6xl mx-auto">
+          <Tabs defaultValue="vacancies" className="w-full">
+            <TabsList className="grid w-full grid-cols-3 mb-8">
+              <TabsTrigger value="vacancies" className="flex items-center gap-2">
+                <Briefcase className="w-4 h-4" />
+                Vacancies
+                <Badge variant="secondary" className="ml-2">{vacancies.length}</Badge>
+              </TabsTrigger>
+              <TabsTrigger value="events" className="flex items-center gap-2">
+                <Calendar className="w-4 h-4" />
+                Events
+                <Badge variant="secondary" className="ml-2">{events.length}</Badge>
+              </TabsTrigger>
+              <TabsTrigger value="volunteer" className="flex items-center gap-2">
+                <Heart className="w-4 h-4" />
+                Volunteer
+                <Badge variant="secondary" className="ml-2">{volunteerOpportunities.length}</Badge>
+              </TabsTrigger>
+            </TabsList>
+
+            <TabsContent value="vacancies" className="space-y-6">
+              <div className="grid gap-6">
+                {vacancies.map((vacancy) => (
+                  <VacancyCard key={vacancy.id} vacancy={vacancy} />
+                ))}
+              </div>
+            </TabsContent>
+
+            <TabsContent value="events" className="space-y-6">
+              <div className="grid gap-6">
+                {events.map((event) => (
+                  <EventCard key={event.id} event={event} />
+                ))}
+              </div>
+            </TabsContent>
+
+            <TabsContent value="volunteer" className="space-y-6">
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {volunteerOpportunities.map((opportunity) => (
+                  <VolunteerCard key={opportunity.id} opportunity={opportunity} />
+                ))}
+              </div>
+            </TabsContent>
+          </Tabs>
+
+          {/* Call to Action */}
+          <div className="mt-16 text-center bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-8">
+            <h2 className="text-2xl font-bold mb-4">Don&apos;t See What You&apos;re Looking For?</h2>
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+              We&apos;re always looking for passionate individuals to join our mission. 
+              If you don&apos;t see a role that fits your skills and interests, we&apos;d still love to hear from you.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" asChild>
+                <Link href="/contact">
+                  <Users className="w-4 h-4 mr-2" />
+                  Contact Us
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" asChild>
+                <Link href="/get-involved">
+                  <Heart className="w-4 h-4 mr-2" />
+                  Learn More
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }

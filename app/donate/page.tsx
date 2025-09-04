@@ -28,36 +28,7 @@ export default function DonatePage() {
     { value: "500000", label: "₦500,000", impact: "Complete program cohort support" },
   ]
 
-  const impactAreas = [
-    {
-      icon: Target,
-      title: "Leadership Development",
-      description: "TEPA programs that build self-awareness and values-based leadership",
-      percentage: 35,
-      color: "text-primary",
-    },
-    {
-      icon: Users,
-      title: "Career Support",
-      description: "TEPYCC mentorship and job placement assistance",
-      percentage: 30,
-      color: "text-secondary",
-    },
-    {
-      icon: Lightbulb,
-      title: "Policy Research",
-      description: "TEPPF fellowships driving systemic change",
-      percentage: 20,
-      color: "text-primary",
-    },
-    {
-      icon: Heart,
-      title: "Community Building",
-      description: "TEPNH networking and wellness programs",
-      percentage: 15,
-      color: "text-secondary",
-    },
-  ]
+  
 
   const handleAmountSelect = (amount: string) => {
     setSelectedAmount(amount)
@@ -128,47 +99,17 @@ export default function DonatePage() {
                   className="rounded-lg shadow-lg"
                 />
               </div>
-            </div>
-
-            {/* Impact Areas */}
-            <div className="space-y-8">
-              <div className="text-center space-y-4">
-                <h3 className="text-2xl lg:text-3xl font-bold text-foreground">Where Your Money Goes</h3>
-                <p className="text-muted-foreground max-w-2xl mx-auto">
-                  We&apos;re committed to transparency. Here&apos;s exactly how your donation creates impact across our programs.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {impactAreas.map((area, index) => (
-                  <Card key={index} className="hover:shadow-lg transition-shadow">
-                    <CardHeader className="text-center">
-                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                        <area.icon className={`h-6 w-6 ${area.color}`} />
-                      </div>
-                      <CardTitle className="text-lg">{area.title}</CardTitle>
-                      <div className="text-2xl font-bold text-primary">{area.percentage}%</div>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-sm text-muted-foreground text-center">{area.description}</p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
+            </div>            
           </div>
         </div>
       </section>
 
       {/* Donation Form */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-white">
         <div className="container px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center space-y-4 mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Make Your Donation</h2>
-              <p className="text-xl text-muted-foreground">
-                Choose your contribution amount and help us empower the next generation of Nigerian leaders.
-              </p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -194,32 +135,11 @@ export default function DonatePage() {
                         </div>
                       </RadioGroup>
                     </div>
-
-                    {/* Preset Amounts */}
-                    <div className="space-y-3">
-                      <Label className="text-base font-medium">Select Amount</Label>
-                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                        {presetAmounts.map((amount) => (
-                          <button
-                            key={amount.value}
-                            onClick={() => handleAmountSelect(amount.value)}
-                            className={`p-4 rounded-lg border-2 text-left transition-all hover:shadow-md ${
-                              selectedAmount === amount.value
-                                ? "border-primary bg-primary/5"
-                                : "border-border hover:border-primary/50"
-                            }`}
-                          >
-                            <div className="font-semibold text-foreground">{amount.label}</div>
-                            <div className="text-xs text-muted-foreground mt-1">{amount.impact}</div>
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-
+                  
                     {/* Custom Amount */}
                     <div className="space-y-3">
                       <Label htmlFor="custom-amount" className="text-base font-medium">
-                        Or Enter Custom Amount
+                        Enter Amount
                       </Label>
                       <div className="relative">
                         <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground">
@@ -351,51 +271,7 @@ export default function DonatePage() {
               </div>
 
               {/* Donation Summary */}
-              <div className="space-y-6">
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Your Impact</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-primary">
-                        ₦{getCurrentAmount() ? Number(getCurrentAmount()).toLocaleString() : "0"}
-                      </div>
-                      <p className="text-sm text-muted-foreground">
-                        {donationType === "monthly" ? "Monthly donation" : "One-time donation"}
-                      </p>
-                    </div>
-
-                    {getCurrentAmount() && (
-                      <div className="space-y-3">
-                        <div className="border-t pt-3">
-                          <h4 className="font-medium text-foreground mb-2">This donation will help:</h4>
-                          <div className="space-y-2">
-                            {Number(getCurrentAmount()) >= 50000 && (
-                              <div className="flex items-center space-x-2 text-sm">
-                                <CheckCircle className="h-4 w-4 text-green-500" />
-                                <span>Fund complete TEPA program for 1 participant</span>
-                              </div>
-                            )}
-                            {Number(getCurrentAmount()) >= 25000 && (
-                              <div className="flex items-center space-x-2 text-sm">
-                                <CheckCircle className="h-4 w-4 text-green-500" />
-                                <span>Provide career mentorship for 2 young people</span>
-                              </div>
-                            )}
-                            {Number(getCurrentAmount()) >= 10000 && (
-                              <div className="flex items-center space-x-2 text-sm">
-                                <CheckCircle className="h-4 w-4 text-green-500" />
-                                <span>Supply workshop materials for 5 participants</span>
-                              </div>
-                            )}
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  </CardContent>
-                </Card>
-
+              <div className="space-y-6">                
                 <Card>
                   <CardHeader>
                     <CardTitle className="text-lg">Other Ways to Help</CardTitle>
@@ -415,44 +291,6 @@ export default function DonatePage() {
                     </Button>
                   </CardContent>
                 </Card>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Trust & Security */}
-      <section className="py-20">
-        <div className="container px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h2 className="text-3xl font-bold text-foreground">Your Trust Matters</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="space-y-3">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto">
-                  <CheckCircle className="h-6 w-6 text-green-600" />
-                </div>
-                <h3 className="font-semibold">Secure Payments</h3>
-                <p className="text-sm text-muted-foreground">
-                  All transactions are encrypted and processed through secure payment gateways.
-                </p>
-              </div>
-              <div className="space-y-3">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto">
-                  <Target className="h-6 w-6 text-blue-600" />
-                </div>
-                <h3 className="font-semibold">Direct Impact</h3>
-                <p className="text-sm text-muted-foreground">
-                  95% of donations go directly to programs. We maintain low overhead costs.
-                </p>
-              </div>
-              <div className="space-y-3">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto">
-                  <Heart className="h-6 w-6 text-purple-600" />
-                </div>
-                <h3 className="font-semibold">Regular Updates</h3>
-                <p className="text-sm text-muted-foreground">
-                  Receive quarterly impact reports showing exactly how your donation helped.
-                </p>
               </div>
             </div>
           </div>

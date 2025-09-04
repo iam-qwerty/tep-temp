@@ -11,36 +11,21 @@ export function Hero() {
           <div className="space-y-6 max-w-2xl">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-bold leading-none tracking-tight">
-                Empowering <span className="text-primary">Purpose-Driven</span> Young Leaders
+                Your Go-to Community For<span className="text-primary"> Purpose</span> and <span className="text-primary">Impact...</span>
               </h1>
-              <p className="text-muted-foreground text-lg md:text-lg leading-normal">
+              {/* <p className="text-muted-foreground text-lg md:text-lg leading-normal">
                 Nigeria&apos;s go-to community for raising young leaders equipped to lead meaningful lives, transform their
                 communities, and shape an equitable future for all.
-              </p>
+              </p> */}
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" asChild>
-                <Link href="#programs">Explore Programs</Link>
+                <Link href="#about">About us</Link>
               </Button>
               <Button size="lg" variant="outline" className="bg-secondary text-secondary-foreground" asChild>
                 <Link href="#get-involved">Get Involved</Link>
               </Button>
-            </div>
-
-            <div className="grid grid-cols-3 gap-6 pt-6">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">65%</div>
-                <div className="text-sm text-muted-foreground">Youth unemployment rate</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-secondary">40%</div>
-                <div className="text-sm text-muted-foreground">Young professionals facing burnout</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">15-30</div>
-                <div className="text-sm text-muted-foreground">Age range we serve</div>
-              </div>
             </div>
           </div>
 
