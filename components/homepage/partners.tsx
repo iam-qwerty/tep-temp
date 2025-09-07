@@ -3,7 +3,6 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight } from "lucide-react"
 
 const featuredPartners = [
   {

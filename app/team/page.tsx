@@ -4,9 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import {
-  ExternalLink,
   Linkedin,
-  Twitter,
   Mail,
   Star,
   Award,
@@ -247,7 +245,7 @@ export default function TeamPage() {
               </div>
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Driving Our Mission</h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Our dedicated leadership team brings expertise, passion, and innovation to every aspect of TEP's work,
+                Our dedicated leadership team brings expertise, passion, and innovation to every aspect of TEP&apos;s work,
                 ensuring we deliver exceptional value to young Nigerians.
               </p>
             </div>
@@ -406,8 +404,8 @@ export default function TeamPage() {
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h2 className="text-3xl lg:text-4xl font-bold">Join Our Growing Team</h2>
             <p className="text-xl opacity-90 max-w-2xl mx-auto">
-              Whether you're interested in volunteering, mentoring, or joining our leadership team,
-              there's a place for you at The Emergence Porch. Together, we can create lasting change.
+              Whether you&apos;re interested in volunteering, mentoring, or joining our leadership team,
+              there&apos;s a place for you at The Emergence Porch. Together, we can create lasting change.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
