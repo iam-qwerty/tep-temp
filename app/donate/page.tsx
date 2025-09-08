@@ -12,9 +12,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import Link from "next/link"
 
 export default function DonatePage() {
-  const [selectedAmount, setSelectedAmount] = useState("50000")
+  const [selectedAmount, setSelectedAmount] = useState("")
   const [customAmount, setCustomAmount] = useState("")
   const [donationType, setDonationType] = useState("one-time")
   const [paymentMethod, setPaymentMethod] = useState("card")
@@ -28,7 +29,7 @@ export default function DonatePage() {
   //   { value: "500000", label: "₦500,000", impact: "Complete program cohort support" },
   // ]
 
-  
+
 
   // const handleAmountSelect = (amount: string) => {
   //   setSelectedAmount(amount)
@@ -75,7 +76,7 @@ export default function DonatePage() {
                 <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Why Your Donation Matters</h2>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    Nigeria faces a youth crisis: 65% of the unemployed are aged 15-34, and 40% of young professionals
+                    Nigeria faces a youth crisis: 65% of the unemployed are aged 15-30, and 40% of young professionals
                     experience burnout. These aren&apos;t just statistics—they represent dreams deferred and potential
                     unrealized.
                   </p>
@@ -99,7 +100,7 @@ export default function DonatePage() {
                   className="rounded-lg shadow-lg"
                 />
               </div>
-            </div>            
+            </div>
           </div>
         </div>
       </section>
@@ -135,7 +136,7 @@ export default function DonatePage() {
                         </div>
                       </RadioGroup>
                     </div>
-                  
+
                     {/* Custom Amount */}
                     <div className="space-y-3">
                       <Label htmlFor="custom-amount" className="text-base font-medium">
@@ -271,7 +272,7 @@ export default function DonatePage() {
               </div>
 
               {/* Donation Summary */}
-              <div className="space-y-6">                
+              <div className="space-y-6">
                 <Card>
                   <CardHeader>
                     <CardTitle className="text-lg">Other Ways to Help</CardTitle>
@@ -279,15 +280,15 @@ export default function DonatePage() {
                   <CardContent className="space-y-3">
                     <Button variant="outline" size="sm" className="w-full justify-start bg-transparent">
                       <Users className="mr-2 h-4 w-4" />
-                      Become a Mentor
+                      <Link href="/contact">Become a Mentor</Link>
                     </Button>
                     <Button variant="outline" size="sm" className="w-full justify-start bg-transparent">
                       <Heart className="mr-2 h-4 w-4" />
-                      Volunteer Your Time
+                      <Link href="/contact">Volunteer Your Time</Link>
                     </Button>
                     <Button variant="outline" size="sm" className="w-full justify-start bg-transparent">
                       <Target className="mr-2 h-4 w-4" />
-                      Partner With Us
+                      <Link href="/contact">Partner With Us</Link>
                     </Button>
                   </CardContent>
                 </Card>

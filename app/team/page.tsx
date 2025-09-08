@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import {
   Linkedin,
-  Mail,
+  Instagram,
   Star,
   Award,
   Heart,
@@ -27,7 +27,7 @@ const advisoryBoard = [
     bio: "Dr. Adedeji brings over 40 years of experience in international diplomacy and youth development. He has served as Nigeria's Foreign Minister and holds a PhD in International Relations.",
     image: "/placeholder.svg?height=300&width=300",
     linkedin: "https://linkedin.com/in/adebayo-adedeji",
-    email: "adebayo.adedeji@example.com",
+    instagram: "adebayo.adedeji@example.com",
     expertise: ["Diplomacy", "Youth Policy", "International Relations"]
   },
   {
@@ -38,7 +38,7 @@ const advisoryBoard = [
     bio: "A globally recognized economist and development expert, Prof. Okonjo-Iweala has led major international organizations and brings invaluable insights in economic development and youth empowerment.",
     image: "/placeholder.svg?height=300&width=300",
     linkedin: "https://linkedin.com/in/ngozi-okonjo-iweala",
-    email: "ngozi.okonjo@example.com",
+    instagram: "ngozi.okonjo@example.com",
     expertise: ["Economic Development", "Global Finance", "Policy Advocacy"]
   },
   {
@@ -49,7 +49,7 @@ const advisoryBoard = [
     bio: "Visionary entrepreneur and philanthropist committed to empowering African entrepreneurs. Through his foundation, he has supported over 10,000 businesses across Africa.",
     image: "/placeholder.svg?height=300&width=300",
     linkedin: "https://linkedin.com/in/tony-elumelu",
-    email: "tony.elumelu@example.com",
+    instagram: "tony.elumelu@example.com",
     expertise: ["Entrepreneurship", "Philanthropy", "Business Development"]
   },
   {
@@ -60,7 +60,7 @@ const advisoryBoard = [
     bio: "Renowned for her anti-corruption stance and education reform initiatives. Dr. Ezekwesili is a passionate advocate for transparency and good governance in Nigeria.",
     image: "/placeholder.svg?height=300&width=300",
     linkedin: "https://linkedin.com/in/oby-ezekwesili",
-    email: "oby.ezekwesili@example.com",
+    instagram: "oby.ezekwesili@example.com",
     expertise: ["Governance", "Education Reform", "Anti-Corruption"]
   }
 ]
@@ -74,7 +74,7 @@ const leadershipTeam = [
     bio: "Sarah leads TEP with a vision to empower young Nigerians through innovative programs and partnerships. With 15+ years in youth development, she has transformed countless lives across Nigeria.",
     image: "/placeholder.svg?height=300&width=300",
     linkedin: "https://linkedin.com/in/sarah-johnson",
-    email: "sarah.johnson@tepnigeria.org",
+    instagram: "sarah.johnson@tepnigeria.org",
     achievements: ["15+ years in youth development", "Led 50+ programs", "Award-winning leader"]
   },
   {
@@ -84,7 +84,7 @@ const leadershipTeam = [
     bio: "Michael oversees all program implementation and ensures quality delivery. His innovative approach to youth empowerment has been recognized nationally and internationally.",
     image: "/placeholder.svg?height=300&width=300",
     linkedin: "https://linkedin.com/in/michael-adebayo",
-    email: "michael.adebayo@tepnigeria.org",
+    instagram: "michael.adebayo@tepnigeria.org",
     achievements: ["Program design expert", "Youth empowerment specialist", "National award recipient"]
   },
   {
@@ -94,7 +94,7 @@ const leadershipTeam = [
     bio: "Grace builds strategic partnerships that amplify TEP's impact. Her network of corporate and government connections has secured unprecedented support for our mission.",
     image: "/placeholder.svg?height=300&width=300",
     linkedin: "https://linkedin.com/in/grace-okafor",
-    email: "grace.okafor@tepnigeria.org",
+    instagram: "grace.okafor@tepnigeria.org",
     achievements: ["Strategic partnerships expert", "Network of 100+ connections", "Fundraising champion"]
   },
   {
@@ -104,7 +104,7 @@ const leadershipTeam = [
     bio: "David ensures smooth operations across all TEP initiatives. His expertise in organizational development and project management keeps our programs running efficiently.",
     image: "/placeholder.svg?height=300&width=300",
     linkedin: "https://linkedin.com/in/david-nwosu",
-    email: "david.nwosu@tepnigeria.org",
+    instagram: "david.nwosu@tepnigeria.org",
     achievements: ["Operations management expert", "Project delivery specialist", "Efficiency optimization leader"]
   }
 ]
@@ -153,7 +153,7 @@ export default function TeamPage() {
             <Badge variant="secondary" className="mb-4">
               Meet Our Team
             </Badge>
-            <h1 className="text-4xl lg:text-6xl font-bold text-foreground">The People Behind TEP</h1>
+            <h1 className="text-4xl lg:text-6xl font-bold text-foreground">The Hearts Behind the Porch</h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               Our diverse team of leaders, advisors, and volunteers work together to create transformative
               experiences that empower young Nigerians to become the leaders of tomorrow.
@@ -218,8 +218,8 @@ export default function TeamPage() {
                               </Link>
                             </Button>
                             <Button variant="outline" size="sm" asChild>
-                              <Link href={`mailto:${advisor.email}`}>
-                                <Mail className="h-4 w-4" />
+                              <Link href={`mailto:${advisor.instagram}`}>
+                                <Instagram className="h-4 w-4" />
                               </Link>
                             </Button>
                           </div>
@@ -291,8 +291,8 @@ export default function TeamPage() {
                         </Link>
                       </Button>
                       <Button variant="outline" size="sm" asChild>
-                        <Link href={`mailto:${leader.email}`}>
-                          <Mail className="h-4 w-4" />
+                        <Link href={`mailto:${leader.instagram}`}>
+                          <Instagram className="h-4 w-4" />
                         </Link>
                       </Button>
                     </div>
@@ -409,8 +409,8 @@ export default function TeamPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
-                <Link href="/contact">
-                  Get Involved <ChevronRight className="ml-2 h-4 w-4" />
+                <Link href="/https://docs.google.com/forms/d/e/1FAIpQLSfDsRpoCHZhQ2-LnK8-N4ALmejp97aYt3p74CIZ3Ar6em7Dlg/viewform">
+                  Become a member <ChevronRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button

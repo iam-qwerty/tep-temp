@@ -431,12 +431,6 @@ export default function OpportunitiesPage() {
                   Contact Us
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link href="/get-involved">
-                  <Heart className="w-4 h-4 mr-2" />
-                  Learn More
-                </Link>
-              </Button>
             </div>
           </div>
         </div>

@@ -167,9 +167,9 @@ export default function ResourcesPage() {
             <TabsContent value="reports">
               <div className="space-y-8">
                 <div className="text-center space-y-4">
-                  <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Research Reports</h2>
+                  <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Reports</h2>
                   <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                    Evidence-based research conducted by our Policy Fellows and research team on critical issues
+                    Evidence-based research conducted by our research/policy team on critical issues
                     affecting Nigerian youth.
                   </p>
                 </div>

@@ -1,34 +1,35 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+// import { Badge } from "@/components/ui/badge"
 import { Quote, Heart, Users, TrendingUp, Award } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
-const stats = [
-  {
-    icon: Users,
-    number: "1000+",
-    label: "Young Lives Impacted",
-    description: "Across our programs and initiatives",
-  },
-  {
-    icon: TrendingUp,
-    number: "85%",
-    label: "Career Clarity Rate",
-    description: "Participants gain clear career direction",
-  },
-  {
-    icon: Award,
-    number: "50+",
-    label: "Community Leaders",
-    description: "Emerged from our programs",
-  },
-  {
-    icon: Heart,
-    number: "95%",
-    label: "Satisfaction Rate",
-    description: "Program participants recommend us",
-  },
-]
+// const stats = [
+//   {
+//     icon: Users,
+//     number: "1000+",
+//     label: "Young Lives Impacted",
+//     description: "Across our programs and initiatives",
+//   },
+//   {
+//     icon: TrendingUp,
+//     number: "85%",
+//     label: "Career Clarity Rate",
+//     description: "Participants gain clear career direction",
+//   },
+//   {
+//     icon: Award,
+//     number: "50+",
+//     label: "Community Leaders",
+//     description: "Emerged from our programs",
+//   },
+//   {
+//     icon: Heart,
+//     number: "95%",
+//     label: "Satisfaction Rate",
+//     description: "Program participants recommend us",
+//   },
+// ]
 
 const testimonials = [
   {
@@ -60,20 +61,20 @@ export function Impact() {
       <div className="container px-4 md:px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <Badge variant="secondary" className="mb-4">
+          {/* <Badge variant="secondary" className="mb-4">
             Our Impact
-          </Badge>
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-6">
+          </Badge> */}
+          {/* <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-6">
             The Quiet Power of What We Do
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          </h2> */}
+          {/* <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             We believe no one should have to navigate purpose alone. Our work creates space for young people to pause,
             reflect, and reconnect with who they are and what they&apos;re capable of becoming.
-          </p>
+          </p> */}
         </div>
 
         {/* Impact Stats */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-20">
+        {/* <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-20">
           {stats.map((stat, index) => (
             <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow">
               <CardContent className="p-0 space-y-4">
@@ -84,12 +85,12 @@ export function Impact() {
               </CardContent>
             </Card>
           ))}
-        </div>
+        </div> */}
 
         {/* Why Our Work Matters */}
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center mb-20">
           <div className="space-y-6">
-            <h3 className="text-3xl font-bold tracking-tight sm:text-4xl">Why Our Work Matters</h3>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-6">Why Our Work Matters</h2>
             <div className="space-y-4 text-muted-foreground">
               <p className="text-lg">
                 We do more than build skills—we restore belief. Through community, mentorship, and intentional
@@ -115,7 +116,7 @@ export function Impact() {
         {/* Testimonials */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold mb-4">Stories of Transformation</h3>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-6">Stories of Transformation</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Hear from the young leaders whose lives have been transformed through our programs.
             </p>
@@ -154,18 +155,12 @@ export function Impact() {
             lasting change across Nigeria.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#get-involved"
+            <Link
+              href="/donate"
               className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90"
             >
               Support Our Mission
-            </a>
-            <a
-              href="#programs"
-              className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground"
-            >
-              Learn More
-            </a>
+            </Link>
           </div>
         </div>
       </div>

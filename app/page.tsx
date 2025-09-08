@@ -2,7 +2,7 @@ import { Hero } from "@/components/homepage/hero"
 import { About } from "@/components/homepage/about"
 import { WhoWeServe } from "@/components/homepage/who-we-serve"
 import { Impact } from "@/components/homepage/impact"
-import { Partners } from "@/components/homepage/partners"
+// import { Partners } from "@/components/homepage/partners"
 // import { Team } from "@/components/homepage/team"
 import { GetInvolved } from "@/components/homepage/get-involved"
 
@@ -16,7 +16,7 @@ export default function HomePage() {
         <Impact />        
         {/* <Team /> */}
         <GetInvolved />
-        <Partners />
+        {/* <Partners /> */}
       </main>
     </div>
   )

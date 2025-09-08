@@ -74,7 +74,7 @@ export default function Footer() {
 
           {/* Programs */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-background">Our Programs</h3>
+            <h3 className="font-semibold text-background">Our Programmes</h3>
             <ul className="space-y-2 text-sm">
               {programs.map((program) => (
                 <li key={program.href}>
