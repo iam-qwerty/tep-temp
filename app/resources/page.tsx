@@ -1,10 +1,11 @@
 import Link from "next/link"
-import { FileText, Download, ExternalLink, Search } from "lucide-react"
+import { FileText, Download, ExternalLink, Search, TrendingUp, Users, Target, Award, Calendar, BarChart3 } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 
 interface Resource {
   year?: string
@@ -14,6 +15,29 @@ interface Resource {
   description: string
   downloadLabel?: string
   fileType?: string
+}
+
+interface AnnualReport {
+  year: string
+  title: string
+  executiveSummary: string
+  keyHighlights: string[]
+  impactMetrics: {
+    label: string
+    value: number
+    target: number
+    unit: string
+  }[]
+  programs: {
+    name: string
+    participants: number
+    outcomes: string[]
+  }[]
+  financials?: {
+    revenue: number
+    expenses: number
+    surplus: number
+  }
 }
 
 const researchReports: Resource[] = [
@@ -97,6 +121,126 @@ const publications: Resource[] = [
   }
 ]
 
+const annualReports: AnnualReport[] = [
+  {
+    year: "2024",
+    title: "Building Tomorrow: Youth Empowerment in Action",
+    executiveSummary: "TEP's most impactful year yet, reaching record numbers of young Nigerians and expanding our programs across all six geopolitical zones.",
+    keyHighlights: [
+      "Launched innovative digital skills training for 5,000+ youth",
+      "Established partnerships with 15 major corporations",
+      "Expanded mentorship program to reach rural communities",
+      "Published groundbreaking research on youth mental health"
+    ],
+    impactMetrics: [
+      { label: "Youth Served", value: 15000, target: 12000, unit: "" },
+      { label: "Employment Rate", value: 78, target: 75, unit: "%" },
+      { label: "Program Satisfaction", value: 94, target: 90, unit: "%" },
+      { label: "Community Partnerships", value: 45, target: 40, unit: "" }
+    ],
+    programs: [
+      {
+        name: "TEPYCC Leadership Program",
+        participants: 1200,
+        outcomes: ["85% completion rate", "92% positive feedback", "67% secured leadership positions"]
+      },
+      {
+        name: "TEPA Entrepreneurship Academy",
+        participants: 800,
+        outcomes: ["$2.3M in startup funding secured", "45 new businesses launched", "78% survival rate after 2 years"]
+      },
+      {
+        name: "TEPPF Policy Fellowship",
+        participants: 150,
+        outcomes: ["12 policy papers published", "8 bills influenced", "25% advanced to government roles"]
+      }
+    ],
+    financials: {
+      revenue: 4500000,
+      expenses: 3800000,
+      surplus: 700000
+    }
+  },
+  {
+    year: "2023",
+    title: "Rising Together: Community and Collaboration",
+    executiveSummary: "A year of strategic partnerships and community-driven initiatives that transformed how we approach youth development.",
+    keyHighlights: [
+      "Established community centers in 6 states",
+      "Launched first rural mentorship program",
+      "Secured major government partnership",
+      "Expanded digital learning platform"
+    ],
+    impactMetrics: [
+      { label: "Youth Served", value: 12000, target: 10000, unit: "" },
+      { label: "Employment Rate", value: 72, target: 70, unit: "%" },
+      { label: "Program Satisfaction", value: 91, target: 85, unit: "%" },
+      { label: "Community Partnerships", value: 32, target: 30, unit: "" }
+    ],
+    programs: [
+      {
+        name: "TEPYCC Leadership Program",
+        participants: 950,
+        outcomes: ["82% completion rate", "88% positive feedback", "52% secured leadership positions"]
+      },
+      {
+        name: "TEPA Entrepreneurship Academy",
+        participants: 600,
+        outcomes: ["$1.8M in startup funding secured", "38 new businesses launched", "71% survival rate after 2 years"]
+      },
+      {
+        name: "TEPPF Policy Fellowship",
+        participants: 120,
+        outcomes: ["9 policy papers published", "6 bills influenced", "18% advanced to government roles"]
+      }
+    ],
+    financials: {
+      revenue: 3200000,
+      expenses: 2900000,
+      surplus: 300000
+    }
+  },
+  {
+    year: "2022",
+    title: "Seeds of Change: Foundations for Impact",
+    executiveSummary: "Our foundational year establishing core programs and building the infrastructure for sustainable youth development.",
+    keyHighlights: [
+      "Launched flagship leadership program",
+      "Established research and policy institute",
+      "Built partnerships with universities",
+      "Created digital learning platform"
+    ],
+    impactMetrics: [
+      { label: "Youth Served", value: 8500, target: 8000, unit: "" },
+      { label: "Employment Rate", value: 68, target: 65, unit: "%" },
+      { label: "Program Satisfaction", value: 87, target: 80, unit: "%" },
+      { label: "Community Partnerships", value: 18, target: 15, unit: "" }
+    ],
+    programs: [
+      {
+        name: "TEPYCC Leadership Program",
+        participants: 650,
+        outcomes: ["78% completion rate", "85% positive feedback", "45% secured leadership positions"]
+      },
+      {
+        name: "TEPA Entrepreneurship Academy",
+        participants: 400,
+        outcomes: ["$950K in startup funding secured", "22 new businesses launched", "65% survival rate after 2 years"]
+      },
+      {
+        name: "TEPPF Policy Fellowship",
+        participants: 80,
+        outcomes: ["5 policy papers published", "3 bills influenced", "12% advanced to government roles"]
+      }
+    ],
+    financials: {
+      revenue: 2100000,
+      expenses: 1950000,
+      surplus: 150000
+    }
+  }
+]
+
 const ResourceCard = ({ resource }: { resource: Resource }) => (
   <Card className="hover:shadow-lg transition-shadow">
     <CardHeader>
@@ -133,6 +277,177 @@ const ResourceCard = ({ resource }: { resource: Resource }) => (
   </Card>
 )
 
+const AnnualReportCard = ({ report }: { report: AnnualReport }) => {
+  const formatCurrency = (amount: number) => {
+    return new Intl.NumberFormat('en-NG', {
+      style: 'currency',
+      currency: 'NGN',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    }).format(amount)
+  }
+
+  const formatNumber = (num: number) => {
+    return new Intl.NumberFormat('en-NG').format(num)
+  }
+
+  return (
+    <Card className="hover:shadow-xl transition-all duration-300 border-l-4 border-l-primary">
+      <CardHeader className="pb-4">
+        <div className="flex items-center justify-between mb-2">
+          <Badge variant="secondary" className="text-sm font-semibold px-3 py-1">
+            <Calendar className="mr-2 h-4 w-4" />
+            {report.year}
+          </Badge>
+          <div className="flex items-center space-x-2">
+            <BarChart3 className="h-5 w-5 text-primary" />
+            <span className="text-sm font-medium text-primary">Annual Report</span>
+          </div>
+        </div>
+        <CardTitle className="text-xl text-foreground">{report.title}</CardTitle>
+        <CardDescription className="text-base">{report.executiveSummary}</CardDescription>
+      </CardHeader>
+
+      <CardContent className="space-y-6">
+        {/* Key Highlights */}
+        <div>
+          <h4 className="font-semibold text-foreground mb-3 flex items-center">
+            <Award className="mr-2 h-4 w-4 text-primary" />
+            Key Highlights
+          </h4>
+          <ul className="space-y-2">
+            {report.keyHighlights.map((highlight, index) => (
+              <li key={index} className="flex items-start text-sm">
+                <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0" />
+                {highlight}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Impact Metrics */}
+        <div>
+          <h4 className="font-semibold text-foreground mb-4 flex items-center">
+            <TrendingUp className="mr-2 h-4 w-4 text-primary" />
+            Impact Metrics
+          </h4>
+          <div className="grid grid-cols-2 gap-4">
+            {report.impactMetrics.map((metric, index) => (
+              <div key={index} className="space-y-2">
+                <div className="flex justify-between text-sm">
+                  <span className="text-muted-foreground">{metric.label}</span>
+                  <span className="font-medium">
+                    {formatNumber(metric.value)}{metric.unit}
+                    {metric.target && (
+                      <span className="text-muted-foreground">/{formatNumber(metric.target)}{metric.unit}</span>
+                    )}
+                  </span>
+                </div>
+                {metric.target && (
+                  <div className="w-full bg-muted rounded-full h-2">
+                    <div
+                      className="bg-primary h-2 rounded-full transition-all duration-1000"
+                      style={{ width: `${Math.min((metric.value / metric.target) * 100, 100)}%` }}
+                    />
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Programs Overview */}
+        <Collapsible>
+          <CollapsibleTrigger asChild>
+            <Button variant="outline" className="w-full justify-between">
+              <span className="flex items-center">
+                <Target className="mr-2 h-4 w-4" />
+                Program Details
+              </span>
+              <span className="text-sm text-muted-foreground">
+                {report.programs.length} programs
+              </span>
+            </Button>
+          </CollapsibleTrigger>
+          <CollapsibleContent className="space-y-4 mt-4">
+            {report.programs.map((program, index) => (
+              <div key={index} className="border rounded-lg p-4 space-y-3">
+                <div className="flex items-center justify-between">
+                  <h5 className="font-medium text-foreground">{program.name}</h5>
+                  <Badge variant="outline">
+                    <Users className="mr-1 h-3 w-3" />
+                    {formatNumber(program.participants)}
+                  </Badge>
+                </div>
+                <ul className="space-y-1">
+                  {program.outcomes.map((outcome, outcomeIndex) => (
+                    <li key={outcomeIndex} className="text-sm text-muted-foreground flex items-center">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2" />
+                      {outcome}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </CollapsibleContent>
+        </Collapsible>
+
+        {/* Financial Summary */}
+        {report.financials && (
+          <Collapsible>
+            <CollapsibleTrigger asChild>
+              <Button variant="outline" className="w-full justify-between">
+                <span className="flex items-center">
+                  <BarChart3 className="mr-2 h-4 w-4" />
+                  Financial Summary
+                </span>
+                <span className="text-sm text-muted-foreground">
+                  {report.year}
+                </span>
+              </Button>
+            </CollapsibleTrigger>
+            <CollapsibleContent className="space-y-4 mt-4">
+              <div className="grid grid-cols-3 gap-4 text-center">
+                <div className="space-y-1">
+                  <p className="text-sm text-muted-foreground">Revenue</p>
+                  <p className="text-lg font-semibold text-green-600">
+                    {formatCurrency(report.financials.revenue)}
+                  </p>
+                </div>
+                <div className="space-y-1">
+                  <p className="text-sm text-muted-foreground">Expenses</p>
+                  <p className="text-lg font-semibold text-red-600">
+                    {formatCurrency(report.financials.expenses)}
+                  </p>
+                </div>
+                <div className="space-y-1">
+                  <p className="text-sm text-muted-foreground">Surplus</p>
+                  <p className="text-lg font-semibold text-primary">
+                    {formatCurrency(report.financials.surplus)}
+                  </p>
+                </div>
+              </div>
+            </CollapsibleContent>
+          </Collapsible>
+        )}
+      </CardContent>
+
+      <CardFooter className="pt-6">
+        <div className="flex space-x-3 w-full">
+          <Button className="flex-1">
+            <Download className="mr-2 h-4 w-4" />
+            Download Full Report
+          </Button>
+          <Button variant="outline" className="flex-1">
+            <ExternalLink className="mr-2 h-4 w-4" />
+            View Online
+          </Button>
+        </div>
+      </CardFooter>
+    </Card>
+  )
+}
+
 export default function ResourcesPage() {
   return (
     <div className="flex flex-col">
@@ -155,8 +470,8 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      {/* Resource Categories */}
-      <section className="py-20 md:px-6">
+            {/* Resource Categories */}
+            <section className="py-20 md:px-6">
         <div className="container px-4">
           <Tabs defaultValue="reports" className="w-full">
             <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto mb-12">
@@ -200,6 +515,71 @@ export default function ResourcesPage() {
               </div>
             </TabsContent>
           </Tabs>
+        </div>
+      </section>
+
+      {/* Annual Reports Section */}
+      <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5 md:px-6">
+        <div className="container px-4">
+          <div className="space-y-8">
+            <div className="text-center space-y-4">
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Annual Reports</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Comprehensive yearly reviews of our impact, programs, achievements, and financial performance
+                in advancing youth development across Nigeria.
+              </p>
+            </div>
+
+            {/* Timeline-style layout */}
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary to-muted" />
+
+              <div className="space-y-12">
+                {annualReports.map((report, index) => (
+                  <div key={index} className="relative flex items-start">
+                    {/* Timeline dot */}
+                    <div className="absolute left-6 w-4 h-4 bg-primary rounded-full border-4 border-background" />
+
+                    {/* Year indicator */}
+                    <div className="ml-16 mr-8 w-20 flex-shrink-0">
+                      <Badge variant="outline" className="text-lg font-bold px-4 py-2">
+                        {report.year}
+                      </Badge>
+                    </div>
+
+                    {/* Report card */}
+                    <div className="flex-1 max-w-4xl">
+                      <AnnualReportCard report={report} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-20 bg-muted">
+        <div className="container px-4">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Contribute to Our Research</h2>
+            <p className="text-xl text-muted-foreground">
+              Have research ideas or want to collaborate on policy advocacy? Join our research community and help create
+              evidence-based solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" asChild>
+                <Link target="_blank" href="https://bit.ly/TEPMembershipForm">
+                  Join Our Community <ExternalLink className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" asChild>
+                <Link href="/contact">Propose Research</Link>
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 

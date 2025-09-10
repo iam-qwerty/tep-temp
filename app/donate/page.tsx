@@ -15,7 +15,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Link from "next/link"
 
 export default function DonatePage() {
-  const [selectedAmount, setSelectedAmount] = useState("")
+  // const [selectedAmount, setSelectedAmount] = useState("")
   const [customAmount, setCustomAmount] = useState("")
   const [donationType, setDonationType] = useState("one-time")
   const [paymentMethod, setPaymentMethod] = useState("card")
@@ -38,12 +38,12 @@ export default function DonatePage() {
 
   const handleCustomAmountChange = (value: string) => {
     setCustomAmount(value)
-    setSelectedAmount("")
+    // setSelectedAmount("")
   }
 
-  const getCurrentAmount = () => {
-    return customAmount || selectedAmount
-  }
+  // const getCurrentAmount = () => {
+  //   return customAmount || selectedAmount
+  // }
 
   return (
     <div className="flex flex-col">
@@ -260,8 +260,9 @@ export default function DonatePage() {
                     {/* Donate Button */}
                     <Button size="lg" className="w-full">
                       <Heart className="mr-2 h-4 w-4" />
-                      Donate ₦{getCurrentAmount() ? Number(getCurrentAmount()).toLocaleString() : "0"}
-                      {donationType === "monthly" && "/month"}
+                      Donate
+                      {/* Donate ₦{getCurrentAmount() ? Number(getCurrentAmount()).toLocaleString() : "0"} */}
+                      {/* {donationType === "monthly" && "/month"} */}
                     </Button>
 
                     <p className="text-xs text-muted-foreground text-center">

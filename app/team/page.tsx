@@ -155,7 +155,7 @@ export default function TeamPage() {
             </Badge>
             <h1 className="text-4xl lg:text-6xl font-bold text-foreground">The Hearts Behind the Porch</h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Our diverse team of leaders, advisors, and volunteers work together to create transformative
+              Our diverse team of advisors, leaders, and volunteers work together to create transformative
               experiences that empower young Nigerians to become the leaders of tomorrow.
             </p>
           </div>
