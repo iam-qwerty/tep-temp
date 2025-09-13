@@ -10,7 +10,7 @@ export function Hero() {
           {/* Left Content */}
           <div className="space-y-6 max-w-2xl">
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-6xl font-bold leading-none tracking-tight">
+              <h1 className="text-4xl md:text-7xl font-bold leading-none tracking-tight mb-12">
                 Your Go-to Community For<span className="text-primary"> Purpose</span> and <span className="text-primary">Impact...</span>
               </h1>
               {/* <p className="text-muted-foreground text-lg md:text-lg leading-normal">

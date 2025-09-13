@@ -52,7 +52,7 @@ export const advisoryBoard = [
     role: "Executive Director, Operations",
     organization: "Fort KnoxGroup",
     bio: "Sayo Ogundeji is a seasoned executive with over 15 years of experience spanning telecommunications, security, media, and politics. A Linguistics and African Languages graduate from the University of Ibadan, he currently serves as Executive Director of Operations at Fort Knox Group, managing operations across key sectors.",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/abm/sayo.png",
     linkedin: "",
     instagram: "",
     expertise: ["Operations Management", "Strategic Planning", "Business Development"]

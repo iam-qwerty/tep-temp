@@ -18,7 +18,7 @@ const whoWeServe = [
 
 export function WhoWeServe() {
     return (
-        <section id="who-we-serve" className="py-20 md:py-32 bg-muted/30 px-4 md:px-6">
+        <section id="who-we-serve" className="py-10 md:py-5 bg-muted/30 px-4 md:px-6">
             <div className="container">
                 {/* Who We Serve */}
                 <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center mb-32">

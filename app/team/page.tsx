@@ -15,21 +15,21 @@ import {
   Crown,
   Shield,
   Lightbulb,
-  ChevronRight
+  ExternalLink,
 } from "lucide-react"
 
 export default function TeamPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/10 via-secondary/5 to-primary/5">
+      <section className="py-20 bg-primary text-muted">
         <div className="container px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <Badge variant="secondary" className="mb-4">
               Meet Our Team
             </Badge>
-            <h1 className="text-4xl lg:text-6xl font-bold text-foreground">The Hearts Behind the Porch</h1>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            <h1 className="text-4xl lg:text-6xl font-bold">The Hearts Behind the Porch</h1>
+            <p className="text-xl leading-relaxed max-w-3xl mx-auto">
               Our diverse team of advisors, leaders, and volunteers work together to create transformative
               experiences that empower young Nigerians to become the leaders of tomorrow.
             </p>
@@ -110,7 +110,7 @@ export default function TeamPage() {
       </section>
 
       {/* Leadership Team Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20">
         <div className="container px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center space-y-4 mb-16">
@@ -274,13 +274,13 @@ export default function TeamPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
                 <Link href="/https://docs.google.com/forms/d/e/1FAIpQLSfDsRpoCHZhQ2-LnK8-N4ALmejp97aYt3p74CIZ3Ar6em7Dlg/viewform">
-                  Become a member <ChevronRight className="ml-2 h-4 w-4" />
+                  Become a member <ExternalLink className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                className="border-primary-foreground text-primary hover:bg-primary-foreground hover:text-primary"
                 asChild
               >
                 <Link href="mailto:theemergenceporch@gmail.com">Contact Us</Link>

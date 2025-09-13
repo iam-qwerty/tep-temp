@@ -107,7 +107,24 @@ export default function Footer() {
               <p className="text-sm font-medium">Newsletter</p>
               <div className="flex space-x-2">
                 <Input placeholder="Your email" className="flex-1" />
-                <Button size="sm" variant="secondary">Subscribe</Button>
+                <Button size="sm" variant="secondary">
+                  <Link target="_blank" href="https://theemergenceporchtep.substack.com/subscribe?next=https%3A%2F%2Fsubstack.com%2F%40theemergenceporch%3Futm_source%3Dshare%26utm_medium%3Dandroid%26r%3D6a2p0l&utm_source=profile-page&utm_medium=web&utm_campaign=substack_profile&just_signed_up=true">
+                    Subscribe
+                  </Link>
+                </Button>
+
+                {/* <form className="flex space-x-2"
+                action="https://theemergenceporchtep.substack.com/subscribe" method="post" target="_blank">
+                <Input
+                  type="email"
+                  name="email"
+                  placeholder="Your email"
+                  required
+                  className="flex-1" />
+                <Button type="submit" size="sm" variant="secondary">
+                  Subscribe
+                </Button>
+              </form> */}
               </div>
             </div>
           </div>
