@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { advisoryBoard, leadershipTeam, volunteerSpotlight } from "@/lib/data"
 import {
   Linkedin,
   Instagram,
@@ -16,132 +17,6 @@ import {
   Lightbulb,
   ChevronRight
 } from "lucide-react"
-
-// Advisory Board Data
-const advisoryBoard = [
-  {
-    id: 1,
-    name: "Dr. Adebayo Adedeji",
-    role: "Chair, Advisory Board",
-    organization: "Former Nigerian Foreign Minister",
-    bio: "Dr. Adedeji brings over 40 years of experience in international diplomacy and youth development. He has served as Nigeria's Foreign Minister and holds a PhD in International Relations.",
-    image: "/placeholder.svg?height=300&width=300",
-    linkedin: "https://linkedin.com/in/adebayo-adedeji",
-    instagram: "adebayo.adedeji@example.com",
-    expertise: ["Diplomacy", "Youth Policy", "International Relations"]
-  },
-  {
-    id: 2,
-    name: "Prof. Ngozi Okonjo-Iweala",
-    role: "Strategic Advisor",
-    organization: "Former Nigerian Finance Minister & WTO Director-General",
-    bio: "A globally recognized economist and development expert, Prof. Okonjo-Iweala has led major international organizations and brings invaluable insights in economic development and youth empowerment.",
-    image: "/placeholder.svg?height=300&width=300",
-    linkedin: "https://linkedin.com/in/ngozi-okonjo-iweala",
-    instagram: "ngozi.okonjo@example.com",
-    expertise: ["Economic Development", "Global Finance", "Policy Advocacy"]
-  },
-  {
-    id: 3,
-    name: "Mr. Tony Elumelu",
-    role: "Entrepreneurship Advisor",
-    organization: "Founder, Tony Elumelu Foundation & UBA Group",
-    bio: "Visionary entrepreneur and philanthropist committed to empowering African entrepreneurs. Through his foundation, he has supported over 10,000 businesses across Africa.",
-    image: "/placeholder.svg?height=300&width=300",
-    linkedin: "https://linkedin.com/in/tony-elumelu",
-    instagram: "tony.elumelu@example.com",
-    expertise: ["Entrepreneurship", "Philanthropy", "Business Development"]
-  },
-  {
-    id: 4,
-    name: "Dr. Oby Ezekwesili",
-    role: "Governance Advisor",
-    organization: "Former Nigerian Education Minister",
-    bio: "Renowned for her anti-corruption stance and education reform initiatives. Dr. Ezekwesili is a passionate advocate for transparency and good governance in Nigeria.",
-    image: "/placeholder.svg?height=300&width=300",
-    linkedin: "https://linkedin.com/in/oby-ezekwesili",
-    instagram: "oby.ezekwesili@example.com",
-    expertise: ["Governance", "Education Reform", "Anti-Corruption"]
-  }
-]
-
-// Leadership Team Data
-const leadershipTeam = [
-  {
-    id: 1,
-    name: "Sarah Johnson",
-    role: "Executive Director",
-    bio: "Sarah leads TEP with a vision to empower young Nigerians through innovative programs and partnerships. With 15+ years in youth development, she has transformed countless lives across Nigeria.",
-    image: "/placeholder.svg?height=300&width=300",
-    linkedin: "https://linkedin.com/in/sarah-johnson",
-    instagram: "sarah.johnson@tepnigeria.org",
-    achievements: ["15+ years in youth development", "Led 50+ programs", "Award-winning leader"]
-  },
-  {
-    id: 2,
-    name: "Michael Adebayo",
-    role: "Chief Programs Officer",
-    bio: "Michael oversees all program implementation and ensures quality delivery. His innovative approach to youth empowerment has been recognized nationally and internationally.",
-    image: "/placeholder.svg?height=300&width=300",
-    linkedin: "https://linkedin.com/in/michael-adebayo",
-    instagram: "michael.adebayo@tepnigeria.org",
-    achievements: ["Program design expert", "Youth empowerment specialist", "National award recipient"]
-  },
-  {
-    id: 3,
-    name: "Grace Okafor",
-    role: "Director of Partnerships",
-    bio: "Grace builds strategic partnerships that amplify TEP's impact. Her network of corporate and government connections has secured unprecedented support for our mission.",
-    image: "/placeholder.svg?height=300&width=300",
-    linkedin: "https://linkedin.com/in/grace-okafor",
-    instagram: "grace.okafor@tepnigeria.org",
-    achievements: ["Strategic partnerships expert", "Network of 100+ connections", "Fundraising champion"]
-  },
-  {
-    id: 4,
-    name: "David Nwosu",
-    role: "Chief Operations Officer",
-    bio: "David ensures smooth operations across all TEP initiatives. His expertise in organizational development and project management keeps our programs running efficiently.",
-    image: "/placeholder.svg?height=300&width=300",
-    linkedin: "https://linkedin.com/in/david-nwosu",
-    instagram: "david.nwosu@tepnigeria.org",
-    achievements: ["Operations management expert", "Project delivery specialist", "Efficiency optimization leader"]
-  }
-]
-
-// Volunteer Spotlight Data
-const volunteerSpotlight = [
-  {
-    id: 1,
-    name: "Amara Chukwu",
-    spotlight: "Mentorship Champion",
-    bio: "Amara has mentored over 200 young Nigerians, helping them discover their purpose and build successful careers. Her dedication to youth empowerment is truly inspiring.",
-    image: "/placeholder.svg?height=400&width=400",
-    linkedin: "https://linkedin.com/in/amara-chukwu",
-    stats: { mentees: 200, hours: 500, impact: "25 successful startups" },
-    story: "Amara's journey began when she was a TEP fellow herself. Now she gives back by guiding the next generation of leaders."
-  },
-  {
-    id: 2,
-    name: "Kemi Adeolu",
-    spotlight: "Community Builder",
-    bio: "Kemi has organized 50+ community events, bringing together young people from diverse backgrounds to learn, grow, and create positive change in their communities.",
-    image: "/placeholder.svg?height=400&width=400",
-    linkedin: "https://linkedin.com/in/kemi-adeolu",
-    stats: { events: 50, participants: 2000, communities: 15 },
-    story: "From organizing workshops to facilitating dialogues, Kemi believes in the power of community to transform lives."
-  },
-  {
-    id: 3,
-    name: "Tunde Bakare",
-    spotlight: "Innovation Catalyst",
-    bio: "Tunde has developed innovative solutions that have reached over 10,000 young people through TEP's digital platforms and educational content.",
-    image: "/placeholder.svg?height=400&width=400",
-    linkedin: "https://linkedin.com/in/tunde-bakare",
-    stats: { reach: 10000, projects: 20, innovations: 5 },
-    story: "Tunde's tech background combined with his passion for education has created groundbreaking learning experiences."
-  }
-]
 
 export default function TeamPage() {
   return (
@@ -273,17 +148,6 @@ export default function TeamPage() {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-muted-foreground leading-relaxed">{leader.bio}</p>
-                    <div className="space-y-2">
-                      <h4 className="font-semibold text-sm text-foreground">Key Achievements:</h4>
-                      <ul className="space-y-1">
-                        {leader.achievements.map((achievement, index) => (
-                          <li key={index} className="text-sm text-muted-foreground flex items-center gap-2">
-                            <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
-                            {achievement}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
                     <div className="flex gap-3 pt-4">
                       <Button variant="outline" size="sm" asChild>
                         <Link href={leader.linkedin} target="_blank">
@@ -291,7 +155,7 @@ export default function TeamPage() {
                         </Link>
                       </Button>
                       <Button variant="outline" size="sm" asChild>
-                        <Link href={`mailto:${leader.instagram}`}>
+                        <Link href={leader.instagram} target="_blank">
                           <Instagram className="h-4 w-4" />
                         </Link>
                       </Button>
