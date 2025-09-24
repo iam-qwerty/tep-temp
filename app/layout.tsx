@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "The Emergence Porch - Empowering Young Nigerian Leaders",
   description:
-    "Empowering young Nigerians with leadership skills, career clarity, entrepreneurial capacity, and social responsibility through mentorship and community.",
+    "Your Go-To Community for Purpose and Impact",
 }
 
 export default function RootLayout({
