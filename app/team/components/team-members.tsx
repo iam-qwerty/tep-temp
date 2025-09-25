@@ -312,7 +312,7 @@ export default function TeamMembers() {
                 className="border-primary-foreground text-primary hover:bg-primary-foreground hover:text-primary"
                 asChild
               >
-                <Link href="mailto:theemergenceporch@gmail.com">Contact Us</Link>
+                <Link href="/contact">Contact Us</Link>
               </Button>
             </div>
           </div>
