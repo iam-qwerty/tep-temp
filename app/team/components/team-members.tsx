@@ -76,25 +76,25 @@ export default function TeamMembers() {
               {advisoryBoard.map((advisor) => (
                 <Card key={advisor.id} className="group hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden border-0 bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
                   <CardContent className="p-0 relative z-10">
-                    <div className="relative h-64 overflow-hidden rounded-t-lg">
+                    <div className="relative h-80 overflow-hidden rounded-t-lg">
                       <Image
                         src={advisor.image}
                         alt={`${advisor.name}`}
                         fill
-                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                        className="object-cover object-[50%_20%] group-hover:scale-110 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                       <div className="absolute bottom-4 left-4 right-4 text-white">
                         <h3 className="text-xl font-bold mb-1">{advisor.name}</h3>
-                        <p className="text-primary font-medium">{advisor.role}</p>
-                        <p className="text-sm opacity-90">{advisor.organization}</p>
+                        <Badge variant="secondary">{advisor.role}</Badge>
+                        <p className="text-sm opacity-90 pl-0.5">{advisor.organization}</p>
                       </div>
                     </div>
                     <div className="p-6 space-y-4">
                       <p className="text-muted-foreground leading-relaxed">{advisor.bio.split('.')[0] + '.'}</p>
                       <div className="flex flex-wrap gap-2">
                         {advisor.expertise.map((skill, index) => (
-                          <Badge key={index} variant="secondary" className="text-xs">
+                          <Badge key={index} variant="default" className="text-xs">
                             {skill}
                           </Badge>
                         ))}
@@ -150,17 +150,17 @@ export default function TeamMembers() {
               {leadershipTeam.map((leader) => (
                 <Card key={leader.id} className="group hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden">
                   <CardContent className="p-0 relative z-10">
-                    <div className="relative h-64 overflow-hidden rounded-t-lg">
+                    <div className="relative h-80 overflow-hidden rounded-t-lg">
                       <Image
                         src={leader.image}
                         alt={`${leader.name}`}
                         fill
-                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                        className={`object-cover ${leader.class} group-hover:scale-110 transition-transform duration-500`}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                       <div className="absolute bottom-4 left-4 right-4 text-white">
                         <h3 className="text-xl font-bold mb-1">{leader.name}</h3>
-                        <p className="text-secondary font-medium">{leader.role}</p>
+                        <Badge variant="secondary">{leader.role}</Badge>
                       </div>
                     </div>
                     <div className="p-6 space-y-4">
