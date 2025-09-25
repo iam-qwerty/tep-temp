@@ -8,7 +8,7 @@ import Footer from "@/components/layout/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "The Emergence Porch - Empowering Young Nigerian Leaders",
+  title: "The Emergence Porch - Your Go-To Community for Purpose and Impact",
   description:
     "Your Go-To Community for Purpose and Impact",
 }
