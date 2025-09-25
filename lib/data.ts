@@ -119,7 +119,7 @@ export const leadershipTeam = [
     image: "/leaders/grace.jpg",
     linkedin: "https://www.linkedin.com/in/grace-ajani-b230b31b7/",
     instagram: "",
-    class: "object-top"
+    class: "object-[50%_20%]"
   },
   {
     id: 4,
