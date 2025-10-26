@@ -35,11 +35,11 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
+      <section className="py-20 bg-primary text-muted">
         <div className="container px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h1 className="text-4xl lg:text-6xl font-bold text-foreground">Contact Us</h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <h1 className="text-4xl lg:text-6xl font-bold">Contact Us</h1>
+            <p className="text-xl leading-relaxed">
               Ready to join our mission or have questions? We&apos;d love to hear from you. Let&apos;s start a conversation about
               creating positive change together.
             </p>
