@@ -57,7 +57,7 @@ const testimonials = [
 
 export function Impact() {
   return (
-    <section id="impact" className="py-20 md:py-32 px-4 md:px-6">
+    <section id="impact" className="py-20 md:py-32 md:px-6">
       <div className="container px-4 md:px-6">
         {/* Header */}
         <div className="text-center mb-16">
