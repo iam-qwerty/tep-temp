@@ -53,7 +53,7 @@ export const advisoryBoard = [
     id: 4,
     name: "Oladotun Ebenezer Morakinyo",
     role: "Lecturer",
-    organization: "Federal Polytechnis, Ayede",
+    organization: "Federal Polytechnic, Ayede",
     bio: `Oladotun Morakinyo is an academic and professional in Urban and Regional Planning. He holds a Bachelor’s and a Master’s degree in Sustainable Urban Development.
     Currently, he lectures in the Department of Urban and Regional Planning at the Federal Polytechnic, Ayede, Oyo State. Oladotun is a corporate member of the Nigerian Institute of Town Planners and the Town Planners Registration Council of Nigeria.
     With a strong commitment to urban development, he contributes to shaping future planners through teaching, research, and professional engagement. Beyond academia, he serves as a guide to young people, supporting their personal development, academic excellence, and spiritual growth.

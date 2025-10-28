@@ -1,4 +1,3 @@
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Heart } from "lucide-react"
 import Image from "next/image"
@@ -18,7 +17,7 @@ const whoWeServe = [
 
 export function WhoWeServe() {
     return (
-        <section id="who-we-serve" className="py-10 md:py-5 bg-muted/30 px-4 md:px-6">
+        <section id="who-we-serve" className="py-10 md:py-5 bg-muted/30 md:px-6">
             <div className="container">
                 {/* Who We Serve */}
                 <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center mb-32">
@@ -62,9 +61,6 @@ export function WhoWeServe() {
 
                 {/* Work Model */}
                 <div className="text-center mb-12">
-                    <Badge variant="secondary" className="mb-4">
-                        Our Approach
-                    </Badge>
                     <h3 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">How We Work</h3>
                     <p className="text-muted-foreground max-w-2xl mx-auto mb-12">
                         Our three-step model guides young people through their journey of growth and impact.

@@ -59,9 +59,7 @@ export default function DonatePage() {
             </div>
             <h1 className="text-4xl lg:text-6xl font-bold text-foreground">Support Our Mission</h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Your donation directly transforms lives by empowering young Nigerians with the skills, clarity, and
-              confidence they need to become purpose-driven leaders. Every contribution creates ripples of positive
-              change across communities.
+              Your donation directly transforms lives by empowering young Nigerians to become self-aware, purpose-driven, and impact-oriented leaders.
             </p>
           </div>
         </div>

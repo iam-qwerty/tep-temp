@@ -9,6 +9,7 @@ export default function TEPYCCPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
+      {/* <section className="relative py-20 bg-[url('https://images.unsplash.com/photo-1660795307991-f9d5254a139c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNhcmVlciUyMHRyYWluaW5nfGVufDB8fDB8fHww')] bg-cover px-2 md:px-6 */}
       <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5 px-2 md:px-6">
         <div className="container px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -323,7 +324,7 @@ export default function TEPYCCPage() {
                 <li>• Young professionals seeking advancement</li>
               </ul>
 
-              <div className="bg-secondary/5 p-6 rounded-lg">
+              <div className="bg-card p-6 rounded-lg">
                 <h4 className="font-semibold text-foreground mb-3">Application Process:</h4>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>• Online application and career assessment</li>

@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { sendMail } from "../actions"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -21,12 +22,6 @@ export default function ContactPage() {
     message: "",
     inquiryType: "",
   })
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission here
-    console.log("Form submitted:", formData)
-  }
 
   const handleChange = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }))
@@ -103,7 +98,7 @@ export default function ContactPage() {
                 <CardDescription className="text-center">We&apos;ll get back to you within 24 hours</CardDescription>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form action={sendMail} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="name">Full Name *</Label>

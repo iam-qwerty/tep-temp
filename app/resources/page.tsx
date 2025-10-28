@@ -448,15 +448,16 @@ const AnnualReportCard = ({ report }: { report: AnnualReport }) => {
   )
 }
 
+// Main Resource Page Component
 export default function ResourcesPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
+      <section className="py-20 bg-primary text-primary-foreground">
         <div className="container px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h1 className="text-4xl lg:text-6xl font-bold text-foreground">Resources</h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <h1 className="text-4xl lg:text-6xl font-bold">Resources</h1>
+            <p className="text-xl leading-relaxed">
               Access our comprehensive library of research reports, publications, and resources to support youth
               development and policy advocacy.
             </p>
@@ -482,8 +483,8 @@ export default function ResourcesPage() {
             <TabsContent value="reports">
               <div className="space-y-8">
                 <div className="text-center space-y-4">
-                  <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Reports</h2>
-                  <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                  <h2 className="text-3xl lg:text-4xl font-bold">Reports</h2>
+                  <p className="text-xl max-w-3xl mx-auto">
                     Evidence-based research conducted by our research/policy team on critical issues
                     affecting Nigerian youth.
                   </p>
@@ -537,7 +538,7 @@ export default function ResourcesPage() {
 
               <div className="space-y-12">
                 {annualReports.map((report, index) => (
-                  <div key={index} className="relative flex items-start">
+                  <div key={index} className="relative flex flex-col md:flex-row md:items-start md:space-x-8">
                     {/* Timeline dot */}
                     <div className="absolute left-6 w-4 h-4 bg-primary rounded-full border-4 border-background" />
 
@@ -549,35 +550,12 @@ export default function ResourcesPage() {
                     </div>
 
                     {/* Report card */}
-                    <div className="flex-1 max-w-4xl">
+                    <div className="flex-1 max-w-full md:max-w-3xl">
                       <AnnualReportCard report={report} />
                     </div>
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-20 bg-muted">
-        <div className="container px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Contribute to Our Research</h2>
-            <p className="text-xl text-muted-foreground">
-              Have research ideas or want to collaborate on policy advocacy? Join our research community and help create
-              evidence-based solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
-                <Link target="_blank" href="https://bit.ly/TEPMembershipForm">
-                  Join Our Community <ExternalLink className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link href="/contact">Propose Research</Link>
-              </Button>
             </div>
           </div>
         </div>

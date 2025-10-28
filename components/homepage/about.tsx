@@ -5,7 +5,7 @@ import { values } from "@/lib/data"
 
 export function About() {
   return (
-    <section id="about" className="py-20 md:pt-32 pb-0 px-4 md:px-6">
+    <section id="about" className="py-20 md:pt-32 pb-0 md:px-6">
       <div className="container px-4 md:px-6">
         {/* About Introduction */}
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center mb-20">

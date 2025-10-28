@@ -30,8 +30,7 @@ export default function Footer() {
               <span className="font-bold text-lg">The Emergence Porch</span>
             </Link>
             <p className="text-sm text-primary-foreground">
-              Empowering young Nigerians with leadership skills, career clarity, and social responsibility through
-              mentorship and community.
+              Empowering young Nigerians to become self-aware, purpose-driven, and impact-oriented leaders.
             </p>
             <div className="flex space-x-4">
               <Link

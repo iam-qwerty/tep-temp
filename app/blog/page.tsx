@@ -96,11 +96,11 @@ export default function NewsPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
+      <section className="py-20 bg-primary text-primary-foreground">
         <div className="container px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h1 className="text-4xl lg:text-6xl font-bold text-foreground">News & Blog</h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <h1 className="text-4xl lg:text-6xl font-bold">News & Blog</h1>
+            <p className="text-xl leading-relaxed">
               Stay updated with the latest news, insights, and stories from The Emergence Porch community. Discover how
               we&apos;re empowering young leaders across Nigeria.
             </p>

@@ -58,7 +58,7 @@ const testimonials = [
 export function Impact() {
   return (
     <section id="impact" className="py-20 md:py-32 md:px-6">
-      <div className="container px-4 md:px-6">
+      <div className="px-4 md:px-6">
         {/* Header */}
         <div className="text-center mb-16">
           {/* <Badge variant="secondary" className="mb-4">
@@ -93,7 +93,7 @@ export function Impact() {
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-6">Why Our Work Matters</h2>
             <div className="space-y-4 text-muted-foreground">
               <p className="text-lg">
-                We do more than build skills—we restore belief. Through community, mentorship, and intentional
+                We do more than build skills — we restore belief. Through community, mentorship, and intentional
                 programmes, we walk with young people as they discover clarity, confidence, and direction.
               </p>
               <p>
@@ -118,7 +118,7 @@ export function Impact() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-6">Stories of Transformation</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Hear from the young leaders whose lives have been transformed through our programs.
+              Hear from the young leaders whose lives have been transformed through our programmes.
             </p>
           </div>
 
@@ -148,16 +148,16 @@ export function Impact() {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-12">
+        <div className="text-center bg-primary text-primary-foreground rounded-2xl p-12">
           <h3 className="text-2xl font-bold mb-4">Be Part of the Ripple</h3>
-          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+          <p className="mb-6 max-w-2xl mx-auto">
             Every young person we support creates a ripple effect that transforms communities. Join us in creating
             lasting change across Nigeria.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/donate"
-              className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90"
+              className="inline-flex h-10 items-center justify-center rounded-md bg-secondary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90"
             >
               Support Our Mission
             </Link>

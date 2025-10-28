@@ -42,7 +42,7 @@ const ways = [
     title: "Volunteer Your Time",
     description: "Lend your passion and skills to support our activities, trainings, or community projects.",
     action: "Become a Member",
-    href: "/https://docs.google.com/forms/d/e/1FAIpQLSfDsRpoCHZhQ2-LnK8-N4ALmejp97aYt3p74CIZ3Ar6em7Dlg/viewform",
+    href: "https://docs.google.com/forms/d/e/1FAIpQLSfDsRpoCHZhQ2-LnK8-N4ALmejp97aYt3p74CIZ3Ar6em7Dlg/viewform",
     color: "text-primary",
   },
   {
