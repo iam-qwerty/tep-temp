@@ -145,45 +145,45 @@ export const leadershipTeam = [
     Through these experiences, she discovered a strong interest in team development and organizational impact, inspiring her to transition into a career in Human Resources. She is currently pursuing HR certifications and building her skills in talent management, employee engagement, and workplace culture. Amina is committed to helping people grow, whether through food, mentorship, or the workplace.
 `,
     image: "/leaders/deborah.png",
-    linkedin: "",
-    instagram: "",
+    linkedin: "#",
+    instagram: "#",
     class: "object-[50%_20%]"
   }
 ]
 
 // Volunteer Spotlight Data
-export const volunteerSpotlight = [
-  {
-    id: 1,
-    name: "Amara Chukwu",
-    spotlight: "Mentorship Champion",
-    bio: "Amara has mentored over 200 young Nigerians, helping them discover their purpose and build successful careers. Her dedication to youth empowerment is truly inspiring.",
-    image: "/placeholder.svg?height=400&width=400",
-    linkedin: "https://linkedin.com/in/amara-chukwu",
-    stats: { mentees: 200, hours: 500, impact: "25 successful startups" },
-    story: "Amara's journey began when she was a TEP fellow herself. Now she gives back by guiding the next generation of leaders."
-  },
-  {
-    id: 2,
-    name: "Kemi Adeolu",
-    spotlight: "Community Builder",
-    bio: "Kemi has organized 50+ community events, bringing together young people from diverse backgrounds to learn, grow, and create positive change in their communities.",
-    image: "/placeholder.svg?height=400&width=400",
-    linkedin: "https://linkedin.com/in/kemi-adeolu",
-    stats: { events: 50, participants: 2000, communities: 15 },
-    story: "From organizing workshops to facilitating dialogues, Kemi believes in the power of community to transform lives."
-  },
-  {
-    id: 3,
-    name: "Tunde Bakare",
-    spotlight: "Innovation Catalyst",
-    bio: "Tunde has developed innovative solutions that have reached over 10,000 young people through TEP's digital platforms and educational content.",
-    image: "/placeholder.svg?height=400&width=400",
-    linkedin: "https://linkedin.com/in/tunde-bakare",
-    stats: { reach: 10000, projects: 20, innovations: 5 },
-    story: "Tunde's tech background combined with his passion for education has created groundbreaking learning experiences."
-  }
-]
+// export const volunteerSpotlight = [
+//   {
+//     id: 1,
+//     name: "Amara Chukwu",
+//     spotlight: "Mentorship Champion",
+//     bio: "Amara has mentored over 200 young Nigerians, helping them discover their purpose and build successful careers. Her dedication to youth empowerment is truly inspiring.",
+//     image: "/placeholder.svg?height=400&width=400",
+//     linkedin: "https://linkedin.com/in/amara-chukwu",
+//     stats: { mentees: 200, hours: 500, impact: "25 successful startups" },
+//     story: "Amara's journey began when she was a TEP fellow herself. Now she gives back by guiding the next generation of leaders."
+//   },
+//   {
+//     id: 2,
+//     name: "Kemi Adeolu",
+//     spotlight: "Community Builder",
+//     bio: "Kemi has organized 50+ community events, bringing together young people from diverse backgrounds to learn, grow, and create positive change in their communities.",
+//     image: "/placeholder.svg?height=400&width=400",
+//     linkedin: "https://linkedin.com/in/kemi-adeolu",
+//     stats: { events: 50, participants: 2000, communities: 15 },
+//     story: "From organizing workshops to facilitating dialogues, Kemi believes in the power of community to transform lives."
+//   },
+//   {
+//     id: 3,
+//     name: "Tunde Bakare",
+//     spotlight: "Innovation Catalyst",
+//     bio: "Tunde has developed innovative solutions that have reached over 10,000 young people through TEP's digital platforms and educational content.",
+//     image: "/placeholder.svg?height=400&width=400",
+//     linkedin: "https://linkedin.com/in/tunde-bakare",
+//     stats: { reach: 10000, projects: 20, innovations: 5 },
+//     story: "Tunde's tech background combined with his passion for education has created groundbreaking learning experiences."
+//   }
+// ]
 
 // Used in components/homepage/about.tsx
 export const values = [

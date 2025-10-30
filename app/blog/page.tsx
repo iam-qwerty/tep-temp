@@ -1,5 +1,4 @@
 "use client"
-
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
@@ -143,9 +142,6 @@ export default function NewsPage() {
           <div className="container px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
-                <Badge variant="secondary" className="mb-4">
-                  Featured Story
-                </Badge>
                 <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Latest Highlights</h2>
               </div>
 
@@ -176,7 +172,7 @@ export default function NewsPage() {
                           <span>{new Date(featuredPost.date).toLocaleDateString()}</span>
                         </div>
                       </div>
-                      <Button asChild>
+                      <Button asChild variant="secondary">
                         <Link href={`/news/${featuredPost.id}`}>
                           Read More <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
@@ -191,12 +187,12 @@ export default function NewsPage() {
       )}
 
       {/* Blog Posts Grid */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-primary text-primary-foreground">
         <div className="container px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Recent Articles</h2>
-              <p className="text-xl text-muted-foreground mt-4">Insights, updates, and stories from our community</p>
+              <h2 className="text-3xl lg:text-4xl font-bold">Recent Articles</h2>
+              <p className="text-xl mt-4">Insights, updates, and stories from our community</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -230,7 +226,7 @@ export default function NewsPage() {
 
             {/* Load More */}
             <div className="text-center mt-12">
-              <Button variant="outline" size="lg">
+              <Button variant="secondary" size="lg">
                 Load More Articles
               </Button>
             </div>
@@ -239,7 +235,7 @@ export default function NewsPage() {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-20">
+      <section className="py-20 bg-muted">
         <div className="container px-4">
           <div className="max-w-2xl mx-auto text-center space-y-6">
             <h2 className="text-3xl font-bold text-foreground">Stay in the Loop</h2>
@@ -248,7 +244,7 @@ export default function NewsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <Input placeholder="Enter your email" className="flex-1" />
-              <Button>Subscribe</Button>
+              <Button variant={'secondary'}>Subscribe</Button>
             </div>
             <p className="text-xs text-muted-foreground">We respect your privacy. Unsubscribe at any time.</p>
           </div>

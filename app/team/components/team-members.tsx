@@ -27,9 +27,6 @@ export default function TeamMembers() {
       <section className="py-20 bg-primary text-muted">
         <div className="container px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <Badge variant="secondary" className="mb-4">
-              Meet Our Team
-            </Badge>
             <h1 className="text-4xl lg:text-6xl font-bold">The Hearts Behind the Porch</h1>
             <p className="text-xl leading-relaxed max-w-3xl mx-auto">
               Our diverse team of advisors, leaders, and volunteers work together to create transformative
@@ -203,7 +200,7 @@ export default function TeamMembers() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
-                <Link href="/https://docs.google.com/forms/d/e/1FAIpQLSfDsRpoCHZhQ2-LnK8-N4ALmejp97aYt3p74CIZ3Ar6em7Dlg/viewform">
+                <Link target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfDsRpoCHZhQ2-LnK8-N4ALmejp97aYt3p74CIZ3Ar6em7Dlg/viewform">
                   Become a member <ExternalLink className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
