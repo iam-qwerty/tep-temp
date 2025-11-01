@@ -8,7 +8,7 @@ const ways = [
   {
     icon: DollarSign,
     title: "Give Financially",
-    description: "Sponsor programs that equip youth with the skills, clarity, and confidence to thrive.",
+    description: "Sponsor programmes that equip youth with the skills, clarity, and confidence to thrive.",
     action: "Donate Now",
     href: "/donate",
     color: "text-primary",

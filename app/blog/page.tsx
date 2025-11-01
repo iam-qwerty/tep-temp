@@ -17,10 +17,10 @@ export default function NewsPage() {
       id: 1,
       title: "Empowering the Next Generation: TEPA Cohort 3 Graduation Ceremony",
       excerpt:
-        "Celebrating 30 young leaders who completed our flagship personal development program and are ready to make their mark on the world.",
+        "Celebrating 30 young leaders who completed our flagship personal development programme and are ready to make their mark on the world.",
       author: "TEP Communications Team",
       date: "2024-12-15",
-      category: "Program Updates",
+      category: "Programme Updates",
       image: "/placeholder.svg?height=300&width=400",
       featured: true,
     },
@@ -28,7 +28,7 @@ export default function NewsPage() {
       id: 2,
       title: "Breaking Barriers: How TEPYCC is Bridging the Skills Gap",
       excerpt:
-        "An in-depth look at how our career development program is helping young Nigerians transition from education to meaningful employment.",
+        "An in-depth look at how our career development programme is helping young Nigerians transition from education to meaningful employment.",
       author: "Dr. Adaora Okafor",
       date: "2024-12-10",
       category: "Impact Stories",
@@ -68,7 +68,7 @@ export default function NewsPage() {
       id: 6,
       title: "Partnership Announcement: Collaborating with TechHub Nigeria",
       excerpt:
-        "Exciting new partnership will provide tech training and internship opportunities for our program participants.",
+        "Exciting new partnership will provide tech training and internship opportunities for our programme participants.",
       author: "Partnership Team",
       date: "2024-11-15",
       category: "Partnerships",
@@ -78,7 +78,7 @@ export default function NewsPage() {
 
   const categories = [
     "all",
-    "Program Updates",
+    "Programme Updates",
     "Impact Stories",
     "Policy & Advocacy",
     "Community Stories",

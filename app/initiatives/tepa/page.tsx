@@ -13,18 +13,15 @@ export default function TEPAPage() {
         <div className="container px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <Badge variant="secondary" className="w-fit">
-                Flagship Program
-              </Badge>
               <h1 className="text-4xl lg:text-6xl font-bold text-foreground">TEPA</h1>
               <h2 className="text-2xl lg:text-3xl text-primary font-semibold">The Emergence Porch Academy</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Self-discovery meets purpose. Our flagship academy program empowers young people with self-awareness,
+                Self-discovery meets purpose. Our flagship academy programme empowers young people with self-awareness,
                 values-based leadership, and critical thinking skills to become intentional changemakers.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" asChild>
-                  <Link href="/contact">
+                  <Link target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfDsRpoCHZhQ2-LnK8-N4ALmejp97aYt3p74CIZ3Ar6em7Dlg/viewform">
                     Apply Now <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
@@ -46,14 +43,14 @@ export default function TEPAPage() {
         </div>
       </section>
 
-      {/* Program Overview */}
+      {/* Programme Overview */}
       <section className="py-20">
         <div className="container px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center space-y-4 mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Program Overview</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Programme Overview</h2>
               <p className="text-xl text-muted-foreground">
-                A comprehensive personal development program designed to unlock potential and cultivate purpose-driven
+                A comprehensive personal development programme designed to unlock potential and cultivate purpose-driven
                 leaders.
               </p>
             </div>
@@ -111,7 +108,7 @@ export default function TEPAPage() {
         <div className="container px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center space-y-4 mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Program Curriculum</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Programme Curriculum</h2>
               <p className="text-xl text-muted-foreground">
                 A structured 12-week journey through personal development and leadership excellence.
               </p>
@@ -190,12 +187,12 @@ export default function TEPAPage() {
         </div>
       </section>
 
-      {/* Program Details */}
+      {/* Programme Details */}
       <section className="py-20 px-2 md:px-6">
         <div className="container px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-foreground">Program Details</h2>
+              <h2 className="text-3xl font-bold text-foreground">Programme Details</h2>
 
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
@@ -247,7 +244,7 @@ export default function TEPAPage() {
                   <li>• Completed application form</li>
                   <li>• Personal statement (500 words)</li>
                   <li>• Two references</li>
-                  <li>• Commitment to full program participation</li>
+                  <li>• Commitment to full programme participation</li>
                 </ul>
               </div>
             </div>
@@ -266,7 +263,7 @@ export default function TEPAPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="default" asChild>
-                <Link href="/contact">
+                <Link target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfDsRpoCHZhQ2-LnK8-N4ALmejp97aYt3p74CIZ3Ar6em7Dlg/viewform">
                   Apply Now <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>

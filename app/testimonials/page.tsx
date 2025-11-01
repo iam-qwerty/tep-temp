@@ -18,7 +18,7 @@ export default function TestimonialsPage() {
       name: "Adaora Okafor",
       role: "Software Developer",
       company: "TechCorp Nigeria",
-      program: "TEPYCC",
+      programme: "TEPYCC",
       image: "/placeholder.svg?height=150&width=150",
       quote:
         "TEPYCC completely transformed my career trajectory. I went from being confused about my path to landing my dream job in tech. The mentorship and practical skills training gave me the confidence to pursue opportunities I never thought possible.",
@@ -30,7 +30,7 @@ export default function TestimonialsPage() {
       name: "Emeka Johnson",
       role: "Policy Analyst",
       company: "Lagos State Government",
-      program: "TEPPF",
+      programme: "TEPPF",
       image: "/placeholder.svg?height=150&width=150",
       quote:
         "The Policy Fellowship opened my eyes to the power of evidence-based advocacy. I&apos;m now working directly with government officials to implement youth-focused policies. TEP gave me the tools and network to make real change happen.",
@@ -42,7 +42,7 @@ export default function TestimonialsPage() {
       name: "Fatima Abdullahi",
       role: "Founder & CEO",
       company: "EduTech Solutions",
-      program: "TEPA",
+      programme: "TEPA",
       image: "/placeholder.svg?height=150&width=150",
       quote:
         "TEPA helped me discover my purpose and gave me the leadership skills to start my own company. The self-awareness journey was transformative, and I now lead with clarity and confidence. My startup has impacted over 10,000 students across Nigeria.",
@@ -54,7 +54,7 @@ export default function TestimonialsPage() {
       name: "David Okonkwo",
       role: "Community Organizer",
       company: "Youth Action Network",
-      program: "TEPNH",
+      programme: "TEPNH",
       image: "/placeholder.svg?height=150&width=150",
       quote:
         "TEPNH gave me a community I never knew I needed. The connections I made here have become lifelong friendships and professional collaborations. It&apos;s more than networking—it&apos;s a family that supports your growth and celebrates your wins.",
@@ -66,7 +66,7 @@ export default function TestimonialsPage() {
       name: "Blessing Okoro",
       role: "Marketing Manager",
       company: "Impact Ventures",
-      program: "TEPYCC",
+      programme: "TEPYCC",
       image: "/placeholder.svg?height=150&width=150",
       quote:
         "The career guidance and mentorship I received through TEPYCC was invaluable. My mentor helped me navigate career transitions and negotiate my current role. I&apos;m now working in marketing for social impact startups, exactly where I want to be.",
@@ -78,7 +78,7 @@ export default function TestimonialsPage() {
       name: "Ibrahim Musa",
       role: "Research Fellow",
       company: "Center for Development Studies",
-      program: "TEPPF",
+      programme: "TEPPF",
       image: "/placeholder.svg?height=150&width=150",
       quote:
         "TEPPF equipped me with rigorous research skills and policy analysis capabilities. My fellowship research on youth employment was cited in national policy documents. I&apos;m now a respected voice in development research, thanks to the foundation TEP provided.",
@@ -105,7 +105,7 @@ export default function TestimonialsPage() {
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="text-4xl lg:text-6xl font-bold text-foreground">Testimonials</h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Hear from the young leaders whose lives have been transformed through The Emergence Porch programs. These
+              Hear from the young leaders whose lives have been transformed through The Emergence Porch programmes. These
               are their stories of growth, discovery, and impact.
             </p>
           </div>
@@ -137,7 +137,7 @@ export default function TestimonialsPage() {
                     <p className="text-muted-foreground">{currentTestimonialData.role}</p>
                     <p className="text-sm text-muted-foreground">{currentTestimonialData.company}</p>
                     <div className="flex items-center justify-center lg:justify-start space-x-2 mt-2">
-                      <Badge variant="secondary">{currentTestimonialData.program}</Badge>
+                      <Badge variant="secondary">{currentTestimonialData.programme}</Badge>
                       <span className="text-xs text-muted-foreground">Class of {currentTestimonialData.year}</span>
                     </div>
                   </div>
@@ -211,7 +211,7 @@ export default function TestimonialsPage() {
                     <p className="text-xs text-muted-foreground">{testimonial.company}</p>
                     <div className="flex items-center justify-center space-x-2 mt-2">
                       <Badge variant="outline" className="text-xs">
-                        {testimonial.program}
+                        {testimonial.programme}
                       </Badge>
                     </div>
                   </CardHeader>
@@ -250,7 +250,7 @@ export default function TestimonialsPage() {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
               <div className="space-y-2">
                 <div className="text-4xl font-bold text-primary">95%</div>
-                <p className="text-muted-foreground">Program completion rate</p>
+                <p className="text-muted-foreground">Programme completion rate</p>
               </div>
               <div className="space-y-2">
                 <div className="text-4xl font-bold text-secondary">80%</div>
@@ -262,7 +262,7 @@ export default function TestimonialsPage() {
               </div>
               <div className="space-y-2">
                 <div className="text-4xl font-bold text-secondary">4.9/5</div>
-                <p className="text-muted-foreground">Average program rating</p>
+                <p className="text-muted-foreground">Average programme rating</p>
               </div>
             </div>
           </div>
@@ -275,7 +275,7 @@ export default function TestimonialsPage() {
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h2 className="text-3xl lg:text-4xl font-bold">Ready to Write Your Success Story?</h2>
             <p className="text-xl opacity-90">
-              Join hundreds of young leaders who have transformed their lives through The Emergence Porch programs. Your
+              Join hundreds of young leaders who have transformed their lives through The Emergence Porch programmes. Your
               journey to purpose and impact starts here.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -292,7 +292,7 @@ export default function TestimonialsPage() {
                 className="bg-secondary-foreground text-secondary hover:bg-secondary-foreground/90"
                 asChild
               >
-                <Link href="/initiatives">Explore Programs</Link>
+                <Link href="/initiatives">Explore Programmes</Link>
               </Button>
             </div>
           </div>

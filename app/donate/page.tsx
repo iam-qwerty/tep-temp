@@ -23,10 +23,10 @@ export default function DonatePage() {
   // const presetAmounts = [
   //   { value: "10000", label: "₦10,000", impact: "Workshop materials for 5 participants" },
   //   { value: "25000", label: "₦25,000", impact: "Career mentorship for 2 young people" },
-  //   { value: "50000", label: "₦50,000", impact: "Full TEPA program for 1 participant" },
-  //   { value: "100000", label: "₦100,000", impact: "TEPYCC program for 4 participants" },
+  //   { value: "50000", label: "₦50,000", impact: "Full TEPA programme for 1 participant" },
+  //   { value: "100000", label: "₦100,000", impact: "TEPYCC programme for 4 participants" },
   //   { value: "250000", label: "₦250,000", impact: "Policy research project funding" },
-  //   { value: "500000", label: "₦500,000", impact: "Complete program cohort support" },
+  //   { value: "500000", label: "₦500,000", impact: "Complete programme cohort support" },
   // ]
 
 

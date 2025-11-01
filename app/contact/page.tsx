@@ -191,7 +191,7 @@ export default function ContactPage() {
           <div className="max-w-2xl mx-auto text-center space-y-6">
             <h2 className="text-3xl font-bold text-foreground">Stay Updated</h2>
             <p className="text-muted-foreground">
-              Subscribe to our newsletter to receive updates on our programs, success stories, and opportunities to get
+              Subscribe to our newsletter to receive updates on our programmes, success stories, and opportunities to get
               involved.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">

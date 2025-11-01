@@ -9,7 +9,7 @@ import Link from "next/link"
 //     icon: Users,
 //     number: "1000+",
 //     label: "Young Lives Impacted",
-//     description: "Across our programs and initiatives",
+//     description: "Across our programmes and initiatives",
 //   },
 //   {
 //     icon: TrendingUp,
@@ -21,13 +21,13 @@ import Link from "next/link"
 //     icon: Award,
 //     number: "50+",
 //     label: "Community Leaders",
-//     description: "Emerged from our programs",
+//     description: "Emerged from our programmes",
 //   },
 //   {
 //     icon: Heart,
 //     number: "95%",
 //     label: "Satisfaction Rate",
-//     description: "Program participants recommend us",
+//     description: "Programme participants recommend us",
 //   },
 // ]
 

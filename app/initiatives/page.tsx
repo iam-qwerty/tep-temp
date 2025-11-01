@@ -12,7 +12,7 @@ export default function InitiativesPage() {
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="text-4xl lg:text-6xl font-bold text-foreground">Our Initiatives</h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Transformative programs designed to help young people discover purpose, grow with clarity, and lead with
+              Transformative programmes designed to help young people discover purpose, grow with clarity, and lead with
               impact across Nigeria.
             </p>
           </div>
@@ -97,7 +97,7 @@ export default function InitiativesPage() {
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Our Flagship Initiatives</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Four comprehensive programs that address different aspects of youth development and empowerment.
+              Four comprehensive programmes that address different aspects of youth development and empowerment.
             </p>
           </div>
 
@@ -117,7 +117,7 @@ export default function InitiativesPage() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
-                  Self-discovery meets purpose. Our flagship academy program empowers young people with self-awareness,
+                  Self-discovery meets purpose. Our flagship academy programme empowers young people with self-awareness,
                   values-based leadership, and critical thinking skills to become intentional changemakers.
                 </p>
                 <div className="flex items-center justify-between">
@@ -146,7 +146,7 @@ export default function InitiativesPage() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
-                  Mentorship and training for meaningful work. This program provides practical tools, mentorship, and
+                  Mentorship and training for meaningful work. This programme provides practical tools, mentorship, and
                   confidence to help young people navigate the world of work with purpose.
                 </p>
                 <div className="flex items-center justify-between">
@@ -225,10 +225,10 @@ export default function InitiativesPage() {
       <section className="py-20">
         <div className="container px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Ready to Join Our Programs?</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Ready to Join Our Programmes?</h2>
             <p className="text-xl text-muted-foreground">
               Whether you&apos;re looking to discover your purpose, advance your career, drive policy change, or connect with
-              like-minded peers, we have a program for you.
+              like-minded peers, we have a programme for you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>

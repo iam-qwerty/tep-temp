@@ -13,9 +13,6 @@ export default function TEPNHPage() {
         <div className="container px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <Badge variant="secondary" className="w-fit">
-                Community & Networking
-              </Badge>
               <h1 className="text-4xl lg:text-6xl font-bold text-foreground">TEPNH</h1>
               <h2 className="text-2xl lg:text-3xl text-primary font-semibold">The Emergence Porch Networking Hub</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -25,7 +22,7 @@ export default function TEPNHPage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" asChild>
                   <Link href="/contact">
-                    Join Community <ArrowRight className="ml-2 h-4 w-4" />
+                    Become a member of our community <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
                 {/* <Button size="lg" variant="outline" asChild>
@@ -113,7 +110,7 @@ export default function TEPNHPage() {
         <div className="container px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center space-y-4 mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Hub Activities & Programs</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Hub Activities & Programmes</h2>
               <p className="text-xl text-muted-foreground">
                 Regular activities designed to foster connection, growth, and wellbeing in our community.
               </p>
@@ -242,7 +239,7 @@ export default function TEPNHPage() {
                   <div className="p-4 border rounded-lg">
                     <h4 className="font-medium text-foreground">Alumni Membership</h4>
                     <p className="text-sm text-muted-foreground">
-                      For graduates of TEP programs with mentorship opportunities
+                      For graduates of TEP programmes with mentorship opportunities
                     </p>
                   </div>
                   <div className="p-4 border rounded-lg">
@@ -347,7 +344,7 @@ export default function TEPNHPage() {
                 asChild
               >
                 <Link href="/contact">
-                  Join Community <ArrowRight className="ml-2 h-4 w-4" />
+                  Become a member of our community <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               {/* <Button

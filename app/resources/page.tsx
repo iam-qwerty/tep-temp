@@ -5,7 +5,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter }
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 
 interface Resource {
   year?: string
@@ -28,7 +27,7 @@ interface AnnualReport {
     target: number
     unit: string
   }[]
-  programs: {
+  programmes: {
     name: string
     participants: number
     outcomes: string[]
@@ -73,7 +72,7 @@ const researchReports: Resource[] = [
   },
   {
     year: "2023",
-    title: "Gender Equality in Youth Leadership Programs",
+    title: "Gender Equality in Youth Leadership Programmes",
     author: "TEP Research Collective",
     description: "Examining gender representation and creating inclusive frameworks for youth leadership development.",
   }
@@ -117,7 +116,7 @@ const publications: Resource[] = [
     type: "Report",
     title: "Annual Impact Report 2024",
     author: "The Emergence Porch",
-    description: "Comprehensive overview of our programs, impact metrics, and stories from our community.",
+    description: "Comprehensive overview of our programmes, impact metrics, and stories from our community.",
   }
 ]
 
@@ -125,22 +124,22 @@ const annualReports: AnnualReport[] = [
   {
     year: "2024",
     title: "Building Tomorrow: Youth Empowerment in Action",
-    executiveSummary: "TEP's most impactful year yet, reaching record numbers of young Nigerians and expanding our programs across all six geopolitical zones.",
+    executiveSummary: "TEP's most impactful year yet, reaching record numbers of young Nigerians and expanding our programmes across all six geopolitical zones.",
     keyHighlights: [
       "Launched innovative digital skills training for 5,000+ youth",
       "Established partnerships with 15 major corporations",
-      "Expanded mentorship program to reach rural communities",
+      "Expanded mentorship programme to reach rural communities",
       "Published groundbreaking research on youth mental health"
     ],
     impactMetrics: [
       { label: "Youth Served", value: 15000, target: 12000, unit: "" },
       { label: "Employment Rate", value: 78, target: 75, unit: "%" },
-      { label: "Program Satisfaction", value: 94, target: 90, unit: "%" },
+      { label: "Programme Satisfaction", value: 94, target: 90, unit: "%" },
       { label: "Community Partnerships", value: 45, target: 40, unit: "" }
     ],
-    programs: [
+    programmes: [
       {
-        name: "TEPYCC Leadership Program",
+        name: "TEPYCC Leadership Programme",
         participants: 1200,
         outcomes: ["85% completion rate", "92% positive feedback", "67% secured leadership positions"]
       },
@@ -161,84 +160,6 @@ const annualReports: AnnualReport[] = [
       surplus: 700000
     }
   },
-  {
-    year: "2023",
-    title: "Rising Together: Community and Collaboration",
-    executiveSummary: "A year of strategic partnerships and community-driven initiatives that transformed how we approach youth development.",
-    keyHighlights: [
-      "Established community centers in 6 states",
-      "Launched first rural mentorship program",
-      "Secured major government partnership",
-      "Expanded digital learning platform"
-    ],
-    impactMetrics: [
-      { label: "Youth Served", value: 12000, target: 10000, unit: "" },
-      { label: "Employment Rate", value: 72, target: 70, unit: "%" },
-      { label: "Program Satisfaction", value: 91, target: 85, unit: "%" },
-      { label: "Community Partnerships", value: 32, target: 30, unit: "" }
-    ],
-    programs: [
-      {
-        name: "TEPYCC Leadership Program",
-        participants: 950,
-        outcomes: ["82% completion rate", "88% positive feedback", "52% secured leadership positions"]
-      },
-      {
-        name: "TEPA Entrepreneurship Academy",
-        participants: 600,
-        outcomes: ["$1.8M in startup funding secured", "38 new businesses launched", "71% survival rate after 2 years"]
-      },
-      {
-        name: "TEPPF Policy Fellowship",
-        participants: 120,
-        outcomes: ["9 policy papers published", "6 bills influenced", "18% advanced to government roles"]
-      }
-    ],
-    financials: {
-      revenue: 3200000,
-      expenses: 2900000,
-      surplus: 300000
-    }
-  },
-  {
-    year: "2022",
-    title: "Seeds of Change: Foundations for Impact",
-    executiveSummary: "Our foundational year establishing core programs and building the infrastructure for sustainable youth development.",
-    keyHighlights: [
-      "Launched flagship leadership program",
-      "Established research and policy institute",
-      "Built partnerships with universities",
-      "Created digital learning platform"
-    ],
-    impactMetrics: [
-      { label: "Youth Served", value: 8500, target: 8000, unit: "" },
-      { label: "Employment Rate", value: 68, target: 65, unit: "%" },
-      { label: "Program Satisfaction", value: 87, target: 80, unit: "%" },
-      { label: "Community Partnerships", value: 18, target: 15, unit: "" }
-    ],
-    programs: [
-      {
-        name: "TEPYCC Leadership Program",
-        participants: 650,
-        outcomes: ["78% completion rate", "85% positive feedback", "45% secured leadership positions"]
-      },
-      {
-        name: "TEPA Entrepreneurship Academy",
-        participants: 400,
-        outcomes: ["$950K in startup funding secured", "22 new businesses launched", "65% survival rate after 2 years"]
-      },
-      {
-        name: "TEPPF Policy Fellowship",
-        participants: 80,
-        outcomes: ["5 policy papers published", "3 bills influenced", "12% advanced to government roles"]
-      }
-    ],
-    financials: {
-      revenue: 2100000,
-      expenses: 1950000,
-      surplus: 150000
-    }
-  }
 ]
 
 const ResourceCard = ({ resource }: { resource: Resource }) => (
@@ -355,81 +276,6 @@ const AnnualReportCard = ({ report }: { report: AnnualReport }) => {
             ))}
           </div>
         </div>
-
-        {/* Programs Overview */}
-        <Collapsible>
-          <CollapsibleTrigger asChild>
-            <Button variant="outline" className="w-full justify-between">
-              <span className="flex items-center">
-                <Target className="mr-2 h-4 w-4" />
-                Program Details
-              </span>
-              <span className="text-sm text-muted-foreground">
-                {report.programs.length} programs
-              </span>
-            </Button>
-          </CollapsibleTrigger>
-          <CollapsibleContent className="space-y-4 mt-4">
-            {report.programs.map((program, index) => (
-              <div key={index} className="border rounded-lg p-4 space-y-3">
-                <div className="flex items-center justify-between">
-                  <h5 className="font-medium text-foreground">{program.name}</h5>
-                  <Badge variant="outline">
-                    <Users className="mr-1 h-3 w-3" />
-                    {formatNumber(program.participants)}
-                  </Badge>
-                </div>
-                <ul className="space-y-1">
-                  {program.outcomes.map((outcome, outcomeIndex) => (
-                    <li key={outcomeIndex} className="text-sm text-muted-foreground flex items-center">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2" />
-                      {outcome}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </CollapsibleContent>
-        </Collapsible>
-
-        {/* Financial Summary */}
-        {report.financials && (
-          <Collapsible>
-            <CollapsibleTrigger asChild>
-              <Button variant="outline" className="w-full justify-between">
-                <span className="flex items-center">
-                  <BarChart3 className="mr-2 h-4 w-4" />
-                  Financial Summary
-                </span>
-                <span className="text-sm text-muted-foreground">
-                  {report.year}
-                </span>
-              </Button>
-            </CollapsibleTrigger>
-            <CollapsibleContent className="space-y-4 mt-4">
-              <div className="grid grid-cols-3 gap-4 text-center">
-                <div className="space-y-1">
-                  <p className="text-sm text-muted-foreground">Revenue</p>
-                  <p className="text-lg font-semibold text-green-600">
-                    {formatCurrency(report.financials.revenue)}
-                  </p>
-                </div>
-                <div className="space-y-1">
-                  <p className="text-sm text-muted-foreground">Expenses</p>
-                  <p className="text-lg font-semibold text-red-600">
-                    {formatCurrency(report.financials.expenses)}
-                  </p>
-                </div>
-                <div className="space-y-1">
-                  <p className="text-sm text-muted-foreground">Surplus</p>
-                  <p className="text-lg font-semibold text-primary">
-                    {formatCurrency(report.financials.surplus)}
-                  </p>
-                </div>
-              </div>
-            </CollapsibleContent>
-          </Collapsible>
-        )}
       </CardContent>
 
       <CardFooter className="pt-6">
@@ -526,7 +372,7 @@ export default function ResourcesPage() {
             <div className="text-center space-y-4">
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Annual Reports</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Comprehensive yearly reviews of our impact, programs, achievements, and financial performance
+                Comprehensive yearly reviews of our impact, programmes, achievements, and financial performance
                 in advancing youth development across Nigeria.
               </p>
             </div>
@@ -572,7 +418,7 @@ export default function ResourcesPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
-                <Link target="_blank" href="https://bit.ly/TEPMembershipForm">
+                <Link target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfDsRpoCHZhQ2-LnK8-N4ALmejp97aYt3p74CIZ3Ar6em7Dlg/viewform">
                   Join Our Community <ExternalLink className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
