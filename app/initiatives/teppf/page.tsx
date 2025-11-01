@@ -24,7 +24,7 @@ export default function TEPPFPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" asChild>
-                  <Link href="/contact">
+                  <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfDsRpoCHZhQ2-LnK8-N4ALmejp97aYt3p74CIZ3Ar6em7Dlg/viewform">
                     Apply for Fellowship <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
@@ -296,7 +296,7 @@ export default function TEPPFPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="default" asChild>
-                <Link href="/contact">
+                <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfDsRpoCHZhQ2-LnK8-N4ALmejp97aYt3p74CIZ3Ar6em7Dlg/viewform">
                   Apply for Fellowship <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>

@@ -14,7 +14,6 @@ import {
   Star, 
   Award,
   Lightbulb,
-  Target
 } from 'lucide-react'
 
 interface Vacancy {
@@ -43,16 +42,16 @@ interface Event {
   featured?: boolean
 }
 
-interface VolunteerOpportunity {
-  id: string
-  title: string
-  category: string
-  commitment: string
-  impact: string
-  description: string
-  skills: string[]
-  icon: React.ReactNode
-}
+// interface VolunteerOpportunity {
+//   id: string
+//   title: string
+//   category: string
+//   commitment: string
+//   impact: string
+//   description: string
+//   skills: string[]
+//   icon: React.ReactNode
+// }
 
 const vacancies: Vacancy[] = [
   // {
@@ -139,66 +138,66 @@ const events: Event[] = [
 //   }
 // ]
 
-const VacancyCard = ({ vacancy }: { vacancy: Vacancy }) => (
-  <Card className="p-6 hover:shadow-xl transition-all duration-300 border-l-4 border-l-primary group">
-    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
-      <div className="flex-1">
-        <div className="flex items-start justify-between mb-3">
-          <div className="flex items-center gap-3">
-            <Briefcase className="w-8 h-8 text-primary" />
-            <div>
-              <h3 className="text-xl font-bold group-hover:text-primary transition-colors">
-                {vacancy.title}
-              </h3>
-              <p className="text-sm text-muted-foreground">{vacancy.department}</p>
-            </div>
-          </div>
-          {vacancy.urgent && (
-            <Badge variant="destructive" className="animate-pulse">
-              Urgent
-            </Badge>
-          )}
-        </div>
+// const VacancyCard = ({ vacancy }: { vacancy: Vacancy }) => (
+//   <Card className="p-6 hover:shadow-xl transition-all duration-300 border-l-4 border-l-primary group">
+//     <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
+//       <div className="flex-1">
+//         <div className="flex items-start justify-between mb-3">
+//           <div className="flex items-center gap-3">
+//             <Briefcase className="w-8 h-8 text-primary" />
+//             <div>
+//               <h3 className="text-xl font-bold group-hover:text-primary transition-colors">
+//                 {vacancy.title}
+//               </h3>
+//               <p className="text-sm text-muted-foreground">{vacancy.department}</p>
+//             </div>
+//           </div>
+//           {vacancy.urgent && (
+//             <Badge variant="destructive" className="animate-pulse">
+//               Urgent
+//             </Badge>
+//           )}
+//         </div>
         
-        <div className="flex flex-wrap gap-2 mb-4">
-          <Badge variant="secondary" className="flex items-center gap-1">
-            <MapPin className="w-3 h-3" />
-            {vacancy.location}
-          </Badge>
-          <Badge variant="outline">{vacancy.type}</Badge>
-          <Badge variant="outline" className="text-green-600">
-            {vacancy.salary}
-          </Badge>
-        </div>
+//         <div className="flex flex-wrap gap-2 mb-4">
+//           <Badge variant="secondary" className="flex items-center gap-1">
+//             <MapPin className="w-3 h-3" />
+//             {vacancy.location}
+//           </Badge>
+//           <Badge variant="outline">{vacancy.type}</Badge>
+//           <Badge variant="outline" className="text-green-600">
+//             {vacancy.salary}
+//           </Badge>
+//         </div>
         
-        <p className="text-muted-foreground mb-4">{vacancy.description}</p>
+//         <p className="text-muted-foreground mb-4">{vacancy.description}</p>
         
-        <div className="mb-4">
-          <h4 className="font-semibold mb-2">Requirements:</h4>
-          <ul className="text-sm text-muted-foreground space-y-1">
-            {vacancy.requirements.map((req, index) => (
-              <li key={index} className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                {req}
-              </li>
-            ))}
-          </ul>
-        </div>
+//         <div className="mb-4">
+//           <h4 className="font-semibold mb-2">Requirements:</h4>
+//           <ul className="text-sm text-muted-foreground space-y-1">
+//             {vacancy.requirements.map((req, index) => (
+//               <li key={index} className="flex items-center gap-2">
+//                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+//                 {req}
+//               </li>
+//             ))}
+//           </ul>
+//         </div>
         
-        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          <Clock className="w-4 h-4" />
-          <span>Deadline: {new Date(vacancy.deadline).toLocaleDateString()}</span>
-        </div>
-      </div>
+//         <div className="flex items-center gap-2 text-sm text-muted-foreground">
+//           <Clock className="w-4 h-4" />
+//           <span>Deadline: {new Date(vacancy.deadline).toLocaleDateString()}</span>
+//         </div>
+//       </div>
       
-      <div className="lg:text-right">
-        <Button asChild className="w-full lg:w-auto">
-          <Link href="/contact">Apply Now</Link>
-        </Button>
-      </div>
-    </div>
-  </Card>
-)
+//       <div className="lg:text-right">
+//         <Button asChild className="w-full lg:w-auto">
+//           <Link href="/contact">Apply Now</Link>
+//         </Button>
+//       </div>
+//     </div>
+//   </Card>
+// )
 
 const EventCard = ({ event }: { event: Event }) => (
   <Card className="p-6 hover:shadow-xl transition-all duration-300 group relative overflow-hidden">

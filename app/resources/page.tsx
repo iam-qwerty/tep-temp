@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { FileText, Download, ExternalLink, Search, TrendingUp, Users, Target, Award, Calendar, BarChart3 } from "lucide-react"
+import { FileText, Download, ExternalLink, Search, TrendingUp, Award, Calendar, BarChart3 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -199,14 +199,14 @@ const ResourceCard = ({ resource }: { resource: Resource }) => (
 )
 
 const AnnualReportCard = ({ report }: { report: AnnualReport }) => {
-  const formatCurrency = (amount: number) => {
-    return new Intl.NumberFormat('en-NG', {
-      style: 'currency',
-      currency: 'NGN',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    }).format(amount)
-  }
+  // const formatCurrency = (amount: number) => {
+  //   return new Intl.NumberFormat('en-NG', {
+  //     style: 'currency',
+  //     currency: 'NGN',
+  //     minimumFractionDigits: 0,
+  //     maximumFractionDigits: 0,
+  //   }).format(amount)
+  // }
 
   const formatNumber = (num: number) => {
     return new Intl.NumberFormat('en-NG').format(num)

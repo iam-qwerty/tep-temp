@@ -1,9 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Heart, Users, Calendar, Coffee } from "lucide-react"
+import { ArrowRight, Heart, Users, Coffee } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function TEPNHPage() {
   return (
@@ -21,7 +20,7 @@ export default function TEPNHPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" asChild>
-                  <Link href="/contact">
+                  <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfDsRpoCHZhQ2-LnK8-N4ALmejp97aYt3p74CIZ3Ar6em7Dlg/viewform">
                     Become a member of our community <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
@@ -48,9 +47,9 @@ export default function TEPNHPage() {
         <div className="container px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center space-y-4 mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Community Hub Overview</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Hub Overview</h2>
               <p className="text-xl text-muted-foreground">
-                More than networking—a supportive ecosystem where young leaders find belonging, inspiration, and
+                More than networking — the hub is a supportive ecosystem where young leaders find belonging, inspiration, and
                 collaborative opportunities.
               </p>
             </div>
@@ -110,7 +109,7 @@ export default function TEPNHPage() {
         <div className="container px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center space-y-4 mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Hub Activities & Programmes</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Hub Activities</h2>
               <p className="text-xl text-muted-foreground">
                 Regular activities designed to foster connection, growth, and wellbeing in our community.
               </p>
@@ -120,7 +119,6 @@ export default function TEPNHPage() {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2">
-                    <Badge variant="secondary">Weekly</Badge>
                     <span>Connection Circles</span>
                   </CardTitle>
                 </CardHeader>
@@ -137,7 +135,6 @@ export default function TEPNHPage() {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2">
-                    <Badge variant="secondary">Monthly</Badge>
                     <span>Networking Mixers</span>
                   </CardTitle>
                 </CardHeader>
@@ -154,7 +151,6 @@ export default function TEPNHPage() {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2">
-                    <Badge variant="secondary">Bi-weekly</Badge>
                     <span>Wellness Sessions</span>
                   </CardTitle>
                 </CardHeader>
@@ -171,7 +167,6 @@ export default function TEPNHPage() {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2">
-                    <Badge variant="secondary">Quarterly</Badge>
                     <span>Community Projects</span>
                   </CardTitle>
                 </CardHeader>
@@ -226,37 +221,13 @@ export default function TEPNHPage() {
                 height={400}
                 className="rounded-lg shadow-lg"
               />
-
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold">Membership Types:</h3>
-                <div className="space-y-3">
-                  <div className="p-4 border rounded-lg">
-                    <h4 className="font-medium text-foreground">General Membership</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Access to all community activities and networking events
-                    </p>
-                  </div>
-                  <div className="p-4 border rounded-lg">
-                    <h4 className="font-medium text-foreground">Alumni Membership</h4>
-                    <p className="text-sm text-muted-foreground">
-                      For graduates of TEP programmes with mentorship opportunities
-                    </p>
-                  </div>
-                  <div className="p-4 border rounded-lg">
-                    <h4 className="font-medium text-foreground">Professional Membership</h4>
-                    <p className="text-sm text-muted-foreground">
-                      For working professionals who want to give back and mentor
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Upcoming Events */}
-      <section className="py-20 bg-white md:px-6">
+      {/* <section className="py-20 bg-white md:px-6">
         <div className="container px-4">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Upcoming Events</h2>
@@ -326,7 +297,7 @@ export default function TEPNHPage() {
             </Card>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-primary/10 to-secondary/10">
@@ -343,7 +314,7 @@ export default function TEPNHPage() {
                 variant="default"
                 asChild
               >
-                <Link href="/contact">
+                <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfDsRpoCHZhQ2-LnK8-N4ALmejp97aYt3p74CIZ3Ar6em7Dlg/viewform">
                   Become a member of our community <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>

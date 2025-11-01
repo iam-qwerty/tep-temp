@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Users, Briefcase, Calendar, MapPin } from "lucide-react"
+import { ArrowRight, Users, Briefcase, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -24,7 +24,7 @@ export default function TEPYCCPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" asChild>
-                  <Link href="/contact">
+                  <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfDsRpoCHZhQ2-LnK8-N4ALmejp97aYt3p74CIZ3Ar6em7Dlg/viewform">
                     Join Programme <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
@@ -297,17 +297,10 @@ export default function TEPYCCPage() {
                 variant="default"
                 asChild
               >
-                <Link href="/contact">
+                <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfDsRpoCHZhQ2-LnK8-N4ALmejp97aYt3p74CIZ3Ar6em7Dlg/viewform">
                   Apply Now <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              {/* <Button
-                size="lg"
-                className="bg-secondary-foreground text-secondary hover:bg-secondary-foreground/90"
-                asChild
-              >
-                <Link href="/contact">Contact Us</Link>
-              </Button> */}
             </div>
           </div>
         </div>
