@@ -10,7 +10,6 @@ import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Checkbox } from "@/components/ui/checkbox"
-import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Link from "next/link"
 
@@ -23,10 +22,10 @@ export default function DonatePage() {
   // const presetAmounts = [
   //   { value: "10000", label: "₦10,000", impact: "Workshop materials for 5 participants" },
   //   { value: "25000", label: "₦25,000", impact: "Career mentorship for 2 young people" },
-  //   { value: "50000", label: "₦50,000", impact: "Full TEPA program for 1 participant" },
-  //   { value: "100000", label: "₦100,000", impact: "TEPYCC program for 4 participants" },
+  //   { value: "50000", label: "₦50,000", impact: "Full TEPA programme for 1 participant" },
+  //   { value: "100000", label: "₦100,000", impact: "TEPYCC programme for 4 participants" },
   //   { value: "250000", label: "₦250,000", impact: "Policy research project funding" },
-  //   { value: "500000", label: "₦500,000", impact: "Complete program cohort support" },
+  //   { value: "500000", label: "₦500,000", impact: "Complete programme cohort support" },
   // ]
 
 
@@ -53,9 +52,6 @@ export default function DonatePage() {
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <div className="flex items-center justify-center space-x-2 mb-4">
               <Heart className="h-8 w-8 text-secondary" />
-              <Badge variant="secondary" className="text-lg px-4 py-2">
-                Make a Difference
-              </Badge>
             </div>
             <h1 className="text-4xl lg:text-6xl font-bold text-foreground">Support Our Mission</h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
@@ -75,7 +71,7 @@ export default function DonatePage() {
                 <div className="space-y-4 text-muted-foreground">
                   <p>
                     Nigeria faces a youth crisis: 65% of the unemployed are aged 15-30, and 40% of young professionals
-                    experience burnout. These aren&apos;t just statistics—they represent dreams deferred and potential
+                    experience burnout. These aren&apos;t just statistics - they represent dreams deferred and potential
                     unrealized.
                   </p>
                   <p>

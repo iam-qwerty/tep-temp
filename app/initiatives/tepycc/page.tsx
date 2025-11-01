@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Users, Briefcase, Calendar, MapPin } from "lucide-react"
+import { ArrowRight, Users, Briefcase, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -14,21 +14,18 @@ export default function TEPYCCPage() {
         <div className="container px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <Badge variant="secondary" className="w-fit">
-                Career Development
-              </Badge>
               <h1 className="text-4xl lg:text-6xl font-bold text-foreground">TEPYCC</h1>
               <h2 className="text-2xl lg:text-3xl text-primary font-semibold">
                 The Emergence Porch Youth Career Compass
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Mentorship and training for meaningful work. This program provides practical tools, mentorship, and
+                Mentorship and training for meaningful work. This programme provides practical tools, mentorship, and
                 confidence to help young people navigate the world of work with purpose and clarity.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" asChild>
-                  <Link href="/contact">
-                    Join Program <ArrowRight className="ml-2 h-4 w-4" />
+                  <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfDsRpoCHZhQ2-LnK8-N4ALmejp97aYt3p74CIZ3Ar6em7Dlg/viewform">
+                    Join Programme <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
                 {/* <Button size="lg" variant="outline" asChild>
@@ -49,14 +46,14 @@ export default function TEPYCCPage() {
         </div>
       </section>
 
-      {/* Program Overview */}
+      {/* Programme Overview */}
       <section className="py-20">
         <div className="container px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center space-y-4 mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Program Overview</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Programme Overview</h2>
               <p className="text-xl text-muted-foreground">
-                A comprehensive career development program that bridges the gap between education and meaningful
+                A comprehensive career development programme that bridges the gap between education and meaningful
                 employment.
               </p>
             </div>
@@ -109,12 +106,12 @@ export default function TEPYCCPage() {
         </div>
       </section>
 
-      {/* Program Components */}
+      {/* Programme Components */}
       <section className="py-20 bg-white">
         <div className="container px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center space-y-4 mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Program Components</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Programme Components</h2>
               <p className="text-xl text-muted-foreground">
                 A holistic approach to career development covering all aspects of professional growth.
               </p>
@@ -242,7 +239,7 @@ export default function TEPYCCPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground text-sm">
-                  &quot;The program didn&apos;t just help me find a job—it helped me find my purpose. I&apos;m now working in marketing
+                  &quot;The programme didn&apos;t just help me find a job—it helped me find my purpose. I&apos;m now working in marketing
                   for social impact startups, exactly where I want to be.&quot;
                 </p>
               </CardContent>
@@ -273,69 +270,17 @@ export default function TEPYCCPage() {
         </div>
       </section>
 
-      {/* Program Details */}
-      <section className="py-20 bg-white md:px-6">
-        <div className="container px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-foreground">Program Details</h2>
-
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Calendar className="h-5 w-5 text-secondary" />
-                  <span>
-                    <strong>Duration:</strong> 16 weeks (4 months)
-                  </span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Users className="h-5 w-5 text-secondary" />
-                  <span>
-                    <strong>Cohort Size:</strong> 20-25 participants
-                  </span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <MapPin className="h-5 w-5 text-secondary" />
-                  <span>
-                    <strong>Format:</strong> Hybrid with industry visits
-                  </span>
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold">Program Benefits:</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li>• Personal career mentor for 6 months</li>
-                  <li>• Job placement assistance</li>
-                  <li>• Professional portfolio development</li>
-                  <li>• Industry networking opportunities</li>
-                  <li>• Certificate of completion</li>
-                  <li>• Lifetime alumni support</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="space-y-6">
-              <h3 className="text-xl font-semibold">Ideal Candidates:</h3>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>• Recent graduates seeking career direction</li>
-                <li>• Job seekers looking to upskill</li>
-                <li>• Career changers exploring new paths</li>
-                <li>• NYSC members preparing for employment</li>
-                <li>• Young professionals seeking advancement</li>
-              </ul>
-
-              <div className="bg-card p-6 rounded-lg">
-                <h4 className="font-semibold text-foreground mb-3">Application Process:</h4>
-                <ul className="space-y-2 text-sm text-muted-foreground">
+      {/* Programme Details */}
+      <section className="py-20 bg-white px-6 md:px-48 lg:px-72">
+          <Card variant="secondary" className="bg-primary p-6 rounded-lg grid justify-center items-center lg:mx-32">
+                <h4 className="font-semibold text-2xl mb-3">Application Process:</h4>
+                <ul className="space-y-2 text-sm">
                   <li>• Online application and career assessment</li>
-                  <li>• Virtual interview with program coordinator</li>
+                  <li>• Virtual interview with programme coordinator</li>
                   <li>• Career goals statement</li>
                   <li>• Commitment to active participation</li>
                 </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+              </Card>
       </section>
 
       {/* Call to Action */}
@@ -352,17 +297,10 @@ export default function TEPYCCPage() {
                 variant="default"
                 asChild
               >
-                <Link href="/contact">
+                <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfDsRpoCHZhQ2-LnK8-N4ALmejp97aYt3p74CIZ3Ar6em7Dlg/viewform">
                   Apply Now <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              {/* <Button
-                size="lg"
-                className="bg-secondary-foreground text-secondary hover:bg-secondary-foreground/90"
-                asChild
-              >
-                <Link href="/contact">Contact Us</Link>
-              </Button> */}
             </div>
           </div>
         </div>

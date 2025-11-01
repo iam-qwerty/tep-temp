@@ -11,7 +11,7 @@ const quickLinks = [
   { href: "/news", label: "News & Blog" },
   { href: "/opportunities", label: "Opportunities" },
 ]
-const programs = [
+const programmes = [
   { href: "/initiatives/tepa", label: "TEPA - Academy" },
   { href: "/initiatives/tepycc", label: "TEPYCC - Career Compass" },
   { href: "/initiatives/teppf", label: "TEPPF - Policy Fellowship" },
@@ -71,14 +71,14 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Programs */}
+          {/* Programmes */}
           <div className="space-y-4">
             <h3 className="font-semibold text-background">Our Programmes</h3>
             <ul className="space-y-2 text-sm">
-              {programs.map((program) => (
-                <li key={program.href}>
-                  <Link href={program.href} className="text-primary-foreground hover:text-primary">
-                    {program.label}
+              {programmes.map((programme) => (
+                <li key={programme.href}>
+                  <Link href={programme.href} className="text-primary-foreground hover:text-primary">
+                    {programme.label}
                   </Link>
                 </li>
               ))}

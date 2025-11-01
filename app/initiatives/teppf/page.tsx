@@ -24,7 +24,7 @@ export default function TEPPFPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" asChild>
-                  <Link href="/contact">
+                  <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfDsRpoCHZhQ2-LnK8-N4ALmejp97aYt3p74CIZ3Ar6em7Dlg/viewform">
                     Apply for Fellowship <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
@@ -53,7 +53,7 @@ export default function TEPPFPage() {
             <div className="text-center space-y-4 mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Fellowship Overview</h2>
               <p className="text-xl text-muted-foreground">
-                An intensive program that transforms young people into effective policy advocates and social change
+                An intensive programme that transforms young people into effective policy advocates and social change
                 agents.
               </p>
             </div>
@@ -126,7 +126,7 @@ export default function TEPPFPage() {
                     <li>• Job creation and skills development policies</li>
                     <li>• Entrepreneurship support systems</li>
                     <li>• Financial inclusion for young people</li>
-                    <li>• NYSC program optimization</li>
+                    <li>• NYSC programme optimization</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -158,20 +158,6 @@ export default function TEPPFPage() {
                   </ul>
                 </CardContent>
               </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-secondary">Civic Engagement & Governance</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>• Youth participation in governance</li>
-                    <li>• Electoral processes and democracy</li>
-                    <li>• Transparency and accountability</li>
-                    <li>• Community development initiatives</li>
-                  </ul>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </div>
@@ -184,7 +170,7 @@ export default function TEPPFPage() {
             <div className="text-center space-y-4 mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Fellowship Structure</h2>
               <p className="text-xl text-muted-foreground">
-                A comprehensive 6-month program combining research, training, and practical advocacy experience.
+                A comprehensive 6-month programme combining research, training, and practical advocacy experience.
               </p>
             </div>
 
@@ -234,6 +220,7 @@ export default function TEPPFPage() {
                   <ul className="space-y-2 text-muted-foreground">
                     <li>• Policy brief and recommendation development</li>
                     <li>• Stakeholder presentations and consultations</li>
+                    <li>• Community project implementation</li>
                     <li>• Media engagement and public campaigns</li>
                     <li>• Final research publication and dissemination</li>
                   </ul>
@@ -249,7 +236,7 @@ export default function TEPPFPage() {
         <div className="container px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-foreground">Fellowship Impact</h2>
+              <h2 className="text-3xl font-bold text-foreground">Fellowship Expected Outcomes</h2>
 
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold">What Fellows Achieve:</h3>
@@ -262,7 +249,7 @@ export default function TEPPFPage() {
                 </ul>
               </div>
 
-              <div className="bg-primary/5 p-6 rounded-lg">
+              {/* <div className="bg-primary/5 p-6 rounded-lg">
                 <h4 className="font-semibold text-foreground mb-3">Recent Fellow Achievements:</h4>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>• Policy brief on youth employment adopted by Lagos State</li>
@@ -270,11 +257,11 @@ export default function TEPPFPage() {
                   <li>• Education financing proposal presented to Federal Ministry</li>
                   <li>• Community development project implemented in 3 states</li>
                 </ul>
-              </div>
+              </div> */}
             </div>
 
             <div className="space-y-6">
-              <h3 className="text-xl font-semibold">Fellowship Benefits:</h3>
+              {/* <h3 className="text-xl font-semibold">Fellowship Benefits:</h3>
               <ul className="space-y-2 text-muted-foreground">
                 <li>• Monthly stipend for research activities</li>
                 <li>• Access to research resources and databases</li>
@@ -282,11 +269,11 @@ export default function TEPPFPage() {
                 <li>• Publication and dissemination support</li>
                 <li>• Networking with government and civil society</li>
                 <li>• Certificate and recognition</li>
-              </ul>
+              </ul> */}
 
               <div className="space-y-4">
-                <h4 className="font-semibold text-foreground">Application Requirements:</h4>
-                <ul className="space-y-2 text-sm text-muted-foreground">
+                <h4 className="font-semibold text-2xl text-foreground">Application Requirements:</h4>
+                <ul className="space-y-2 text-base text-muted-foreground">
                   <li>• Bachelor&apos;s degree or equivalent experience</li>
                   <li>• Research proposal (1,500 words)</li>
                   <li>• Academic transcripts and CV</li>
@@ -309,7 +296,7 @@ export default function TEPPFPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="default" asChild>
-                <Link href="/contact">
+                <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfDsRpoCHZhQ2-LnK8-N4ALmejp97aYt3p74CIZ3Ar6em7Dlg/viewform">
                   Apply for Fellowship <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -319,7 +306,7 @@ export default function TEPPFPage() {
                 className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground"
                 asChild
               >
-                <Link href="/resources">View Research</Link>
+                <Link href="/resources">View Previous Research Publications</Link>
               </Button>
             </div>
           </div>
