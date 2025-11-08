@@ -4,6 +4,7 @@ import { ArrowRight, Lightbulb, FileText, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import Testimonials from "@/components/initiative/testimonials"
 
 export default function TEPPFPage() {
   return (
@@ -285,8 +286,10 @@ export default function TEPPFPage() {
           </div>
         </div>
       </section>
+  {/* Testimonials */}
+  <Testimonials initiative="TEPPF" />
 
-      {/* Call to Action */}
+  {/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-primary/10 to-secondary/10">
         <div className="container px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">

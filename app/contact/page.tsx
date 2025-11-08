@@ -92,10 +92,10 @@ export default function ContactPage() {
 
           {/* Contact Form */}
           <div className="max-w-2xl mx-auto">
-            <Card>
+            <Card variant="secondary">
               <CardHeader>
                 <CardTitle className="text-center">Send Us a Message</CardTitle>
-                <CardDescription className="text-center">We&apos;ll get back to you within 24 hours</CardDescription>
+                <CardDescription className="text-center text-white">We&apos;ll get back to you within 24 hours</CardDescription>
               </CardHeader>
               <CardContent>
                 <form action={sendMail} className="space-y-6">
@@ -174,7 +174,7 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full" size="lg">
+                  <Button type="submit" className="w-full" size="lg" variant="secondary">
                     <Send className="mr-2 h-4 w-4" />
                     Send Message
                   </Button>

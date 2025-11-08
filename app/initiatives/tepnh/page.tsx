@@ -3,6 +3,7 @@ import Link from "next/link"
 import { ArrowRight, Heart, Users, Coffee } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import Testimonials from "@/components/initiative/testimonials"
 
 export default function TEPNHPage() {
   return (
@@ -299,7 +300,10 @@ export default function TEPNHPage() {
         </div>
       </section> */}
 
-      {/* Call to Action */}
+  {/* Testimonials */}
+  <Testimonials initiative="TEPNH" />
+
+  {/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-primary/10 to-secondary/10">
         <div className="container px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">

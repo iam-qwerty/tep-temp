@@ -2,8 +2,9 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Users, Briefcase, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import Testimonials from "@/components/initiative/testimonials"
 
 export default function TEPYCCPage() {
   return (
@@ -191,7 +192,7 @@ export default function TEPYCCPage() {
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 md:px-6">
+      {/* <section className="py-20 md:px-6">
         <div className="container px-4">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Success Stories</h2>
@@ -268,7 +269,7 @@ export default function TEPYCCPage() {
             </Card>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Programme Details */}
       <section className="py-20 bg-white px-6 md:px-48 lg:px-72">
@@ -282,8 +283,10 @@ export default function TEPYCCPage() {
                 </ul>
               </Card>
       </section>
+  {/* Testimonials */}
+  <Testimonials initiative="TEPYCC" />
 
-      {/* Call to Action */}
+  {/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-primary/10 to-secondary/10">
         <div className="container px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
